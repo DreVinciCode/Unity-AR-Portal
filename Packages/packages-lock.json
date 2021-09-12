@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.microsoft.mixedreality.sceneunderstanding": {
+      "version": "file:MixedReality/com.microsoft.mixedreality.sceneunderstanding-0.6.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.5.7",
       "depth": 0,

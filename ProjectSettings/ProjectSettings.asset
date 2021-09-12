@@ -128,7 +128,10 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -8783953526792551327, guid: 82d1c2f519fe3084fa87353d6e965063, type: 2}
+  - {fileID: 9102114109738231412, guid: 14c09f67598f7424fa30f2cf03a64b6a, type: 2}
+  - {fileID: 6897530901956920587, guid: 8d0572730b6912d44a5818e367820a44, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -579,7 +582,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    14: master
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -600,12 +604,12 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: Template3D
-  metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroPackageVersion: 1.0.1.0
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DreVinci Creations
+  metroCertificateIssuer: DreVinci Creations
+  metroCertificateNotAfter: 0093bb06ebc6d801
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: Portal
