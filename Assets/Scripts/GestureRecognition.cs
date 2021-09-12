@@ -41,6 +41,7 @@ public class GestureRecognition : MonoBehaviour
     private float fingerSnap_timer; 
     private float gesture_timer_threshold = 0.3f;
     private float fingerSnap_deadline = 1.0f;
+    private bool gesture_check;
 
     private void Awake()
     {
@@ -64,18 +65,41 @@ public class GestureRecognition : MonoBehaviour
         + HandPoseUtils.IndexFingerCurl(Handedness.Both) + "\n"
         + HandPoseUtils.MiddleFingerCurl(Handedness.Both) + "\n"
         + HandPoseUtils.RingFingerCurl(Handedness.Both) + "\n"
-        + HandPoseUtils.PinkyFingerCurl(Handedness.Both) + "\n";
+        + HandPoseUtils.PinkyFingerCurl(Handedness.Both) + "\n"
+        + currentGesture.name;
 
+        if(hasRecognized && currentGesture.Equals(previousGesture))
+        {
+            gesture_timer += Time.deltaTime;
+            if(gesture_timer > gesture_timer_threshold)
+            {
+                gesture_check = true;
+            }
+            else
+            { gesture_check = false; }
+        }
+        else if(hasRecognized && !currentGesture.Equals(previousGesture))
+        {
+            gesture_check = false;
+            gesture_timer = 0;
+        }
 
+        //Check for new gestures
+        if(hasRecognized && !currentGesture.Equals(previousGesture) && !currentGesture.Equals(gestures[0]))
+        {
+            previousGesture = currentGesture;
+        }
+
+        //Display Index Markers with FingerGun gesture
         leftIndexObject.GetComponent<Renderer>().enabled = false;
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose) && currentGesture.Equals(gestures[4]))
         {
             leftIndexObject.GetComponent<Renderer>().enabled = true;
             leftIndexObject.transform.position = indexPose.Position;
         }
 
         rightIndextObject.GetComponent<Renderer>().enabled = false;
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose) && currentGesture.Equals(gestures[4]))
         {
             rightIndextObject.GetComponent<Renderer>().enabled = true;
             rightIndextObject.transform.position = indexPose.Position;
