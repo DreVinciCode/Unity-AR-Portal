@@ -46,7 +46,7 @@ public class SpawnProjectile : MonoBehaviour
     {
         GameObject vfx;
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexKnuckle, Handedness.Right, out knuklePose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.Wrist, Handedness.Right, out knuklePose))
         {
             vfx = Instantiate(RightEffectToSpawn, indexPose.Position, knuklePose.Rotation);
             Object.Destroy(vfx, 2f);
@@ -57,7 +57,7 @@ public class SpawnProjectile : MonoBehaviour
     {
         GameObject vfx;
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexKnuckle, Handedness.Left, out knuklePose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.Wrist, Handedness.Left, out knuklePose))
         {
             vfx = Instantiate(LeftEffectToSpawn, indexPose.Position, knuklePose.Rotation);
             Object.Destroy(vfx, 2f);
