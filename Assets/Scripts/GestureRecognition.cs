@@ -148,12 +148,12 @@ public class GestureRecognition : MonoBehaviour
          * pinky > 0.3
          */
 
-        if (thumbCurl < 0.3f && indexCurl < 0.1f && middleCurl > 0.3 && ringCurl > 0.3 && pinkyCurl > 0.3)
+        if (thumbCurl < 0.3f && middleCurl > 0.3 && ringCurl > 0.3 && pinkyCurl > 0.3)
         {
             return gestures[1];
         }
 
-        else if (thumbCurl > 0.7 && indexCurl < 0.1f && middleCurl > 0.3 && ringCurl > 0.3 && pinkyCurl > 0.3)
+        else if (thumbCurl > 0.7  && middleCurl > 0.3 && ringCurl > 0.3 && pinkyCurl > 0.3)
         {
             return gestures[2];
         }
