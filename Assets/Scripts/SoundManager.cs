@@ -11,6 +11,8 @@ public static class SoundManager
         FireContinuous,
         Rock_Seperate,
         Rock_Collide,
+        BluePortal,
+        OrangePortal,
     }
 
     private static Dictionary<Sound, float> soundTimerDictionary;
@@ -28,7 +30,7 @@ public static class SoundManager
         {
             GameObject soundGameObject = new GameObject("Sound");
             audioSource = soundGameObject.AddComponent<AudioSource>();
-            audioSource.PlayOneShot(GetAudioClip(sound), 0.05f);
+            audioSource.PlayOneShot(GetAudioClip(sound), 1f);
         }
     }
 
