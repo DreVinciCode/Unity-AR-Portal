@@ -139,10 +139,7 @@ public class GestureRecognition : MonoBehaviour
         float middleCurl = HandPoseUtils.MiddleFingerCurl(Handedness.Any);
         float ringCurl = HandPoseUtils.RingFingerCurl(Handedness.Any);
         float pinkyCurl = HandPoseUtils.PinkyFingerCurl(Handedness.Any);
-        float[] currentCurlValues = { thumbCurl, indexCurl, middleCurl, ringCurl, pinkyCurl };
-
-        curlAverage = (thumbCurl + indexCurl + middleCurl + ringCurl + pinkyCurl) / 5;
-
+ 
         /*
          * thumb < 0.3    thumb > 0.7
          * index < 0.1
@@ -151,12 +148,12 @@ public class GestureRecognition : MonoBehaviour
          * pinky > 0.3
          */
 
-        if (thumbCurl < 0.3f && indexCurl < 0.1f && middleCurl < 0.1 && ringCurl > 0.3 && pinkyCurl > 0.3)
+        if (thumbCurl < 0.3f && indexCurl < 0.1f && middleCurl > 0.3 && ringCurl > 0.3 && pinkyCurl > 0.3)
         {
             return gestures[1];
         }
 
-        else if (thumbCurl > 0.7 && indexCurl < 0.1f && middleCurl < 0.1 && ringCurl > 0.3 && pinkyCurl > 0.3)
+        else if (thumbCurl > 0.7 && indexCurl < 0.1f && middleCurl > 0.3 && ringCurl > 0.3 && pinkyCurl > 0.3)
         {
             return gestures[2];
         }
