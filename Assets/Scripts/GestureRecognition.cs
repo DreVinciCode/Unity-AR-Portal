@@ -48,6 +48,7 @@ public class GestureRecognition : MonoBehaviour
     private bool left_fire_check;
     private bool right_fire_check;
 
+    
 
     private void Awake()
     {
