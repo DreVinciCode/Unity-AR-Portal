@@ -31,17 +31,23 @@ public class GestureRecognition : MonoBehaviour
     GameObject leftIndexObject;
     GameObject rightIndextObject;
 
-    public event EventHandler OnSnapDetected;
+    public event EventHandler OnLeftFireDetected;
+    public event EventHandler OnRightFireDetected;
+
 
     private float curlAverage;
     private float threshold = 0.1f;
 
     private float distanceMiddleThumb;
     private float gesture_timer;
-    private float fingerSnap_timer; 
+    private float left_fire_timer;
+    private float right_fire_timer;
     private float gesture_timer_threshold = 0.3f;
     private float fingerSnap_deadline = 1.0f;
     private bool gesture_check;
+    private bool left_fire_check;
+    private bool right_fire_check;
+
 
     private void Awake()
     {
@@ -52,7 +58,7 @@ public class GestureRecognition : MonoBehaviour
     {
         leftIndexObject = Instantiate(leftHandIndexMarker, this.transform);
         rightIndextObject = Instantiate(rightHandIndexMarker, this.transform);
-
+        left_fire_timer = 0;
     }
 
     // Update is called once per frame
@@ -96,6 +102,15 @@ public class GestureRecognition : MonoBehaviour
         {
             leftIndexObject.GetComponent<Renderer>().enabled = true;
             leftIndexObject.transform.position = indexPose.Position;
+            left_fire_check = true;
+            left_fire_timer = 1f;
+        }
+
+        if(left_fire_timer > 0 && currentGesture.Equals(gestures[3]) && left_fire_check)
+        {
+            left_fire_check = false;
+            left_fire_timer -= Time.deltaTime;
+            OnLeftFireDetected?.Invoke(this, EventArgs.Empty);
         }
 
         rightIndextObject.GetComponent<Renderer>().enabled = false;
@@ -103,8 +118,17 @@ public class GestureRecognition : MonoBehaviour
         {
             rightIndextObject.GetComponent<Renderer>().enabled = true;
             rightIndextObject.transform.position = indexPose.Position;
+            right_fire_check = true;
+            right_fire_timer = 1f;
         }
-   
+
+        if (right_fire_timer > 0 && currentGesture.Equals(gestures[3]) && right_fire_check)
+        {
+            right_fire_check = false;
+            right_fire_timer -= Time.deltaTime;
+            OnRightFireDetected?.Invoke(this, EventArgs.Empty);
+        }
+
     }
 
     Gesture RecognizedGesture()

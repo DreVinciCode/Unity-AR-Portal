@@ -18,4 +18,4 @@ MonoBehaviour:
   fingertipPrefab: {fileID: 7094064642998883381, guid: b37dde41a983d664c8a09a91313733e7, type: 3}
   handMeshPrefab: {fileID: 1887883006053652, guid: a86f479797fea8f4189f924b3b6ad979, type: 3}
   handMeshVisualizationModes: 0
-  handJointVisualizationModes: 0
+  handJointVisualizationModes: 1
