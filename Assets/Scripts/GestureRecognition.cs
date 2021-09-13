@@ -143,28 +143,26 @@ public class GestureRecognition : MonoBehaviour
 
         curlAverage = (thumbCurl + indexCurl + middleCurl + ringCurl + pinkyCurl) / 5;
 
-        bool inRange = false;
-        for (int i = 0; i < gestures.Count; i++)
-        {
-            for (int j = 0; j < currentCurlValues.Length; j++)
-            {
-                if (currentCurlValues[j] <= gestures[i].fingerCurls[j] + threshold && currentCurlValues[j] >= gestures[i].fingerCurls[j] - threshold)
-                {
-                    inRange = true;
-                }
-                else
-                {
-                    inRange = false;
-                    break;
-                }
-            }
+        /*
+         * thumb < 0.3    thumb > 0.7
+         * index < 0.1
+         * middle < 0.1
+         * ring > 0.3
+         * pinky > 0.3
+         */
 
-            if (inRange)
-            {
-                return gestures[i];
-            }
+        if (thumbCurl < 0.3f && indexCurl < 0.1f && middleCurl < 0.1 && ringCurl > 0.3 && pinkyCurl > 0.3)
+        {
+            return gestures[1];
         }
 
-        return gestures[0];
+        else if (thumbCurl > 0.7 && indexCurl < 0.1f && middleCurl < 0.1 && ringCurl > 0.3 && pinkyCurl > 0.3)
+        {
+            return gestures[2];
+        }
+        else
+        {
+            return gestures[0];
+        }
     }
 }

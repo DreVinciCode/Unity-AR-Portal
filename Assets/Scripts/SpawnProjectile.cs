@@ -10,7 +10,7 @@ public class SpawnProjectile : MonoBehaviour
     //private GameObject firepoint;
     public List<GameObject> vfx = new List<GameObject>();
 
-    MixedRealityPose indexPose;
+    MixedRealityPose indexPose, knuklePose;
 
 
     private GameObject RightEffectToSpawn, LeftEffectToSpawn;
@@ -46,9 +46,9 @@ public class SpawnProjectile : MonoBehaviour
     {
         GameObject vfx;
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexKnuckle, Handedness.Right, out knuklePose))
         {
-            vfx = Instantiate(RightEffectToSpawn, indexPose.Position, Quaternion.FromToRotation(indexPose.Position, transform.forward));
+            vfx = Instantiate(RightEffectToSpawn, indexPose.Position, knuklePose.Rotation);
             Object.Destroy(vfx, 2f);
         }
     }
@@ -57,9 +57,9 @@ public class SpawnProjectile : MonoBehaviour
     {
         GameObject vfx;
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexKnuckle, Handedness.Left, out knuklePose))
         {
-            vfx = Instantiate(LeftEffectToSpawn, indexPose.Position, Quaternion.FromToRotation(indexPose.Position, transform.forward));
+            vfx = Instantiate(LeftEffectToSpawn, indexPose.Position, knuklePose.Rotation);
             Object.Destroy(vfx, 2f);
 
         }
