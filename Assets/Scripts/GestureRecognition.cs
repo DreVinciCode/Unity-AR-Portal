@@ -98,7 +98,7 @@ public class GestureRecognition : MonoBehaviour
 
         //Display Index Markers with FingerGun gesture
         leftIndexObject.GetComponent<Renderer>().enabled = false;
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose) && currentGesture.Equals(gestures[4]))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose) && currentGesture.Equals(gestures[1]))
         {
             leftIndexObject.GetComponent<Renderer>().enabled = true;
             leftIndexObject.transform.position = indexPose.Position;
@@ -106,7 +106,7 @@ public class GestureRecognition : MonoBehaviour
             left_fire_timer = 1f;
         }
 
-        if(left_fire_timer > 0 && currentGesture.Equals(gestures[3]) && left_fire_check)
+        if(left_fire_timer > 0 && currentGesture.Equals(gestures[2]) && left_fire_check)
         {
             left_fire_check = false;
             left_fire_timer -= Time.deltaTime;
@@ -114,7 +114,7 @@ public class GestureRecognition : MonoBehaviour
         }
 
         rightIndextObject.GetComponent<Renderer>().enabled = false;
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose) && currentGesture.Equals(gestures[4]))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose) && currentGesture.Equals(gestures[1]))
         {
             rightIndextObject.GetComponent<Renderer>().enabled = true;
             rightIndextObject.transform.position = indexPose.Position;
@@ -122,7 +122,7 @@ public class GestureRecognition : MonoBehaviour
             right_fire_timer = 1f;
         }
 
-        if (right_fire_timer > 0 && currentGesture.Equals(gestures[3]) && right_fire_check)
+        if (right_fire_timer > 0 && currentGesture.Equals(gestures[2]) && right_fire_check)
         {
             right_fire_check = false;
             right_fire_timer -= Time.deltaTime;

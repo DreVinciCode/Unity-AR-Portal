@@ -9795,6 +9795,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  muzzleProjectile: {fileID: 1226350727563025143, guid: 99b1d8d74556b094bbbfe2ed62d58bcb, type: 3}
+  impactProjectile: {fileID: 5715611725160685049, guid: 0114058b8522da04d99e80160e0493e6, type: 3}
 --- !u!65 &-7564482978857204584
 BoxCollider:
   m_ObjectHideFlags: 0
