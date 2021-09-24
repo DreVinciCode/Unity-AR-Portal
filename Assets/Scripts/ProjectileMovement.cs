@@ -7,6 +7,7 @@ public class ProjectileMovement : MonoBehaviour
     public float speed;
     public GameObject muzzleProjectile;
     public GameObject impactProjectile;
+    public GameObject portal;
 
     private void Start()
     {
@@ -43,6 +44,7 @@ public class ProjectileMovement : MonoBehaviour
         if(impactProjectile != null)
         {
             var impactVFX = Instantiate(impactProjectile, pos, rot);
+            var impactPortal = Instantiate(portal, pos, rot);
             Object.Destroy(impactVFX, 0.1f);
         }
 
