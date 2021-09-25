@@ -13,7 +13,6 @@ public class CubeBehavior : MonoBehaviour
 
     public Vector3 offset;
 
-    private GameObject[] cubes;
     // Start is called before the first frame update
     void Start()
     {

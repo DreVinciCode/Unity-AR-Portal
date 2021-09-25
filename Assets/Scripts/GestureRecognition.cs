@@ -78,7 +78,7 @@ public class GestureRecognition : MonoBehaviour
         }
 
         //Pre-Finger Snap
-        if (pinkyCurl > 0.6f && ringCurl > 0.6f && middleCurl < 0.4f && distanceMiddleThumb < 0.025f)
+        if (pinkyCurl > 0.6f && ringCurl > 0.6f && middleCurl < 0.4f && distanceMiddleThumb < 0.035f)
         {
             gesture_timer += Time.deltaTime;
             if (gesture_timer >= gesture_timer_threshold)
