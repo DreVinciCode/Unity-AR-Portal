@@ -48,7 +48,9 @@ public class SpawnProjectile : MonoBehaviour
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.Wrist, Handedness.Right, out knuklePose))
         {
-            vfx = Instantiate(RightEffectToSpawn, indexPose.Position, knuklePose.Rotation);
+            //vfx = Instantiate(RightEffectToSpawn, indexPose.Position, knuklePose.Rotation);
+            vfx = Instantiate(RightEffectToSpawn, indexPose.Position, Quaternion.LookRotation(Camera.main.transform.forward));
+
             SoundManager.PlaySound(SoundManager.Sound.OrangePortal);
             Object.Destroy(vfx, 2f);
         }

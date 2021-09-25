@@ -29,8 +29,7 @@ public class ProjectileMovement : MonoBehaviour
         else
         {
             Debug.Log("Zero Speed");
-        }
-        
+        }       
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -46,14 +45,9 @@ public class ProjectileMovement : MonoBehaviour
             var impactVFX = Instantiate(impactProjectile, pos, rot);
 
             //Determine if portal is present or not by the game tag. If present, destroy portal
-            if(GameObject.FindGameObjectsWithTag("PortalBlue").Length > 0)
+            if(GameObject.FindGameObjectsWithTag(portal.tag).Length > 0)
             {
-                Destroy(GameObject.FindWithTag("PortalBlue"));
-            }
-
-            if (GameObject.FindGameObjectsWithTag("PortalOrange").Length > 0)
-            {
-                Destroy(GameObject.FindWithTag("PortalOrange"));
+                Destroy(GameObject.FindWithTag(portal.tag));
             }
 
             var impactPortal = Instantiate(portal, pos, rot);
