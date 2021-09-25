@@ -7,6 +7,7 @@ public class ProjectileMovement : MonoBehaviour
     public float speed;
     public GameObject muzzleProjectile;
     public GameObject impactProjectile;
+    public GameObject portal;
 
     private void Start()
     {
@@ -43,6 +44,19 @@ public class ProjectileMovement : MonoBehaviour
         if(impactProjectile != null)
         {
             var impactVFX = Instantiate(impactProjectile, pos, rot);
+
+            //Determine if portal is present or not by the game tag. If present, destroy portal
+            if(GameObject.FindGameObjectsWithTag("PortalBlue").Length > 0)
+            {
+                Destroy(GameObject.FindWithTag("PortalBlue"));
+            }
+
+            if (GameObject.FindGameObjectsWithTag("PortalOrange").Length > 0)
+            {
+                Destroy(GameObject.FindWithTag("PortalOrange"));
+            }
+
+            var impactPortal = Instantiate(portal, pos, rot);
             Object.Destroy(impactVFX, 0.1f);
         }
 
