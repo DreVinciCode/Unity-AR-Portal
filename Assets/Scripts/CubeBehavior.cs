@@ -23,7 +23,7 @@ public class CubeBehavior : MonoBehaviour
 
     private void GestureRecognition_OnSnapDetected(object sender, System.EventArgs e)
     {
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Right, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Both, out pose))
         {
             var cube = Instantiate(CompanionCube, pose.Position + offset, pose.Rotation);
         }

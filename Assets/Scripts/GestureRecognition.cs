@@ -26,7 +26,7 @@ public class GestureRecognition : MonoBehaviour
     private Gesture previousGesture;
     public TMP_Text curlValues;
 
-    MixedRealityPose indexPose;
+    MixedRealityPose indexPose, thumbPose, middlePose;
 
     GameObject leftIndexObject;
     GameObject rightIndextObject;
@@ -70,6 +70,12 @@ public class GestureRecognition : MonoBehaviour
         float middleCurl = HandPoseUtils.MiddleFingerCurl(Handedness.Both);
         float ringCurl = HandPoseUtils.RingFingerCurl(Handedness.Both);
         float pinkyCurl = HandPoseUtils.PinkyFingerCurl(Handedness.Both);
+
+        //Approach to detect a finger snap for now; until a better method can be introduced.
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Both, out thumbPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Both, out middlePose))
+        {
+            distanceMiddleThumb = Vector3.Distance(thumbPose.Position, middlePose.Position);
+        }
 
         //Pre-Finger Snap
         if (pinkyCurl > 0.6f && ringCurl > 0.6f && middleCurl < 0.4f && distanceMiddleThumb < 0.025f)
