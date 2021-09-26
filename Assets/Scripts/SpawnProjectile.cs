@@ -10,8 +10,7 @@ public class SpawnProjectile : MonoBehaviour
     //private GameObject firepoint;
     public List<GameObject> vfx = new List<GameObject>();
 
-    MixedRealityPose indexPose, knuklePose;
-
+    MixedRealityPose indexPose;
 
     private GameObject RightEffectToSpawn, LeftEffectToSpawn;
 
@@ -23,7 +22,6 @@ public class SpawnProjectile : MonoBehaviour
         gestureRecognition.OnLeftFireDetected += GestureRecognition_OnLeftFireDetected;
         RightEffectToSpawn = vfx[0];
         LeftEffectToSpawn = vfx[1];
-
     }
 
     private void GestureRecognition_OnLeftFireDetected(object sender, System.EventArgs e)
@@ -36,19 +34,12 @@ public class SpawnProjectile : MonoBehaviour
         RightSpawnVFX();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void RightSpawnVFX()
     {
         GameObject vfx;
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.Wrist, Handedness.Right, out knuklePose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose))
         {
-            //vfx = Instantiate(RightEffectToSpawn, indexPose.Position, knuklePose.Rotation);
             vfx = Instantiate(RightEffectToSpawn, indexPose.Position, Quaternion.LookRotation(Camera.main.transform.forward));
 
             SoundManager.PlaySound(SoundManager.Sound.OrangePortal);
@@ -60,12 +51,12 @@ public class SpawnProjectile : MonoBehaviour
     {
         GameObject vfx;
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.Wrist, Handedness.Left, out knuklePose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose))
         {
-            vfx = Instantiate(LeftEffectToSpawn, indexPose.Position, knuklePose.Rotation);
+            vfx = Instantiate(LeftEffectToSpawn, indexPose.Position, Quaternion.LookRotation(Camera.main.transform.forward));
+
             SoundManager.PlaySound(SoundManager.Sound.BluePortal);
             Object.Destroy(vfx, 2f);
-
         }
     }
 }

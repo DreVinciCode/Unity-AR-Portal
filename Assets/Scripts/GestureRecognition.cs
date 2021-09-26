@@ -26,13 +26,14 @@ public class GestureRecognition : MonoBehaviour
     private Gesture previousGesture;
     public TMP_Text curlValues;
 
-    MixedRealityPose indexPose;
+    MixedRealityPose indexPose, thumbPose, middlePose;
 
     GameObject leftIndexObject;
     GameObject rightIndextObject;
 
     public event EventHandler OnLeftFireDetected;
     public event EventHandler OnRightFireDetected;
+    public event EventHandler OnSnapDetected;
 
 
     private float curlAverage;
@@ -43,12 +44,11 @@ public class GestureRecognition : MonoBehaviour
     private float left_fire_timer;
     private float right_fire_timer;
     private float gesture_timer_threshold = 0.3f;
+    private float fingerSnap_timer;
     private float fingerSnap_deadline = 1.0f;
     private bool gesture_check;
     private bool left_fire_check;
     private bool right_fire_check;
-
-    
 
     private void Awake()
     {
@@ -65,15 +65,64 @@ public class GestureRecognition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float thumbCurl = HandPoseUtils.ThumbFingerCurl(Handedness.Both);
+        float indexCurl = HandPoseUtils.IndexFingerCurl(Handedness.Both);
+        float middleCurl = HandPoseUtils.MiddleFingerCurl(Handedness.Both);
+        float ringCurl = HandPoseUtils.RingFingerCurl(Handedness.Both);
+        float pinkyCurl = HandPoseUtils.PinkyFingerCurl(Handedness.Both);
+
+        //Approach to detect a finger snap for now; until a better method can be introduced.
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Both, out thumbPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Both, out middlePose))
+        {
+            distanceMiddleThumb = Vector3.Distance(thumbPose.Position, middlePose.Position);
+        }
+
+        //Pre-Finger Snap
+        if (pinkyCurl > 0.6f && ringCurl > 0.6f && middleCurl < 0.4f && distanceMiddleThumb < 0.035f)
+        {
+            gesture_timer += Time.deltaTime;
+            if (gesture_timer >= gesture_timer_threshold)
+            {
+                fingerSnap_timer = 0;
+            }
+        }
+        else
+        {
+            gesture_timer = 0f;
+        }
+
+        fingerSnap_timer += Time.deltaTime;
+
+        //Small time window to detect post-snap
+        if (fingerSnap_timer < fingerSnap_deadline)
+        {
+            //Post-Finger Snap
+            if (pinkyCurl > 0.6f && ringCurl > 0.6f && middleCurl > 0.7f && distanceMiddleThumb > 0.05f)
+            {
+                //call event
+                OnSnapDetected?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            OnRightFireDetected?.Invoke(this, EventArgs.Empty);
+        }
+
+        if(Input.GetMouseButtonDown(1))
+        {
+            OnLeftFireDetected?.Invoke(this, EventArgs.Empty);
+
+        }
+
         Gesture currentGesture = RecognizedGesture();
         bool hasRecognized = !currentGesture.Equals(new Gesture());
 
-        curlValues.text = "\n" + HandPoseUtils.ThumbFingerCurl(Handedness.Both) + "\n"
-        + HandPoseUtils.IndexFingerCurl(Handedness.Both) + "\n"
-        + HandPoseUtils.MiddleFingerCurl(Handedness.Both) + "\n"
-        + HandPoseUtils.RingFingerCurl(Handedness.Both) + "\n"
-        + HandPoseUtils.PinkyFingerCurl(Handedness.Both) + "\n"
-        + currentGesture.name;
+        curlValues.text = "\n" + thumbCurl + "\n"
+        + indexCurl + "\n"
+        + middleCurl + "\n"
+        + ringCurl + "\n"
+        + pinkyCurl + "\n";
 
         if(hasRecognized && currentGesture.Equals(previousGesture))
         {

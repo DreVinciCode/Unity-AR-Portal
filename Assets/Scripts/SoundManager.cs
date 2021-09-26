@@ -17,6 +17,7 @@ public static class SoundManager
 
     private static Dictionary<Sound, float> soundTimerDictionary;
     private static AudioSource audioSource;
+    private static DestroyGameObject destroyCall;
 
     public static void Initialize()
     {
@@ -30,7 +31,10 @@ public static class SoundManager
         {
             GameObject soundGameObject = new GameObject("Sound");
             audioSource = soundGameObject.AddComponent<AudioSource>();
+            destroyCall = soundGameObject.AddComponent<DestroyGameObject>();
             audioSource.PlayOneShot(GetAudioClip(sound), 0.5f);
+            destroyCall.destroyCall(soundGameObject);
+            
         }
     }
 
