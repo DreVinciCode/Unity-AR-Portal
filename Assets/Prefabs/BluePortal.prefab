@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5018766656798233056}
   - component: {fileID: 5018766656798233058}
   - component: {fileID: 5018766656798233057}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4813,7 +4813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5018766657363806762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BluePortal
   m_TagString: PortalBlue
   m_Icon: {fileID: 0}
@@ -4848,7 +4848,7 @@ GameObject:
   - component: {fileID: 5018766657980679631}
   - component: {fileID: 5018766657980679617}
   - component: {fileID: 5018766657980679616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dark Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9712,7 +9712,7 @@ GameObject:
   - component: {fileID: 3299908335062963842}
   - component: {fileID: 276765595389176579}
   - component: {fileID: 1495561055935350920}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}

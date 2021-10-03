@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4020382155185573690}
   - component: {fileID: 1862134778239136443}
   - component: {fileID: 1063317603584299312}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 6892434659421183095}
   - component: {fileID: 6892434659421183097}
   - component: {fileID: 6892434659421183096}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dark Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4989,7 +4989,7 @@ GameObject:
   - component: {fileID: 6892434660201597016}
   - component: {fileID: 6892434660201597018}
   - component: {fileID: 6892434660201597017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9791,7 +9791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6892434660712649618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OrangePortal
   m_TagString: PortalOrange
   m_Icon: {fileID: 0}

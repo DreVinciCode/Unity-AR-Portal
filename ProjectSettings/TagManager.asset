@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PortalBlue
+  - UI
   - PortalOrange
+  - PortalBlue
   - CompanionCube
   layers:
   - Default
@@ -14,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - PortalSystem
+  - CompanionCube
   - 
   - 
   - 

@@ -9794,10 +9794,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704b956bca801484dabb2fbc3a44a142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
   muzzleProjectile: {fileID: 4246071946314638450, guid: fbc0ebdc8abdb2246a523bbbc8353abb, type: 3}
   impactProjectile: {fileID: 6888776540272353669, guid: 0bdc8faa23da1054fb599317ccf5406e, type: 3}
   portal: {fileID: 6892434660712649614, guid: 514f01e5d40772a48ad105a327b34202, type: 3}
+  portalTargets:
+    serializedVersion: 2
+    m_Bits: 2147483703
 --- !u!65 &-3775287846204055904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9819,10 +9822,10 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4692185353395191432}
   serializedVersion: 2
-  m_Mass: 0.0000001
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0

@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Portal_Scene.unity
-    guid: 685dc12c742439446b558e988608a8ae
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/MRTK/Examples/Experimental/ExamplesHub/Scenes/MRTKExamplesHubMainMenu.unity
     guid: 63a00118e809c754f9c7911bb85d635f
@@ -66,6 +66,6 @@ EditorBuildSettings:
     path: Assets/MRTK/Examples/Demos/Solvers/Scenes/SurfaceMagnetismSpatialAwarenessExample.unity
     guid: 8feae87497f549c4e8dc08a6e4b7b15c
   m_configObjects:
-    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 8d0572730b6912d44a5818e367820a44, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 14c09f67598f7424fa30f2cf03a64b6a, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 82d1c2f519fe3084fa87353d6e965063, type: 2}
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: cf450354bec80194390aecc64a4e25fc, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ffb9fa5fcff2d2e43ac3a4e3a71b6403, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 17681314c62a7244daaabe51f56694f7, type: 2}
