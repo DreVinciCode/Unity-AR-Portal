@@ -12,6 +12,8 @@ public class SpawnProjectile : MonoBehaviour
 
     MixedRealityPose indexPose;
 
+    public Vector3 offset;
+
     private GameObject RightEffectToSpawn, LeftEffectToSpawn;
 
     // Start is called before the first frame update
@@ -40,7 +42,7 @@ public class SpawnProjectile : MonoBehaviour
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out indexPose))
         {
-            vfx = Instantiate(RightEffectToSpawn, indexPose.Position, Quaternion.LookRotation(Camera.main.transform.forward));
+            vfx = Instantiate(RightEffectToSpawn, indexPose.Position + offset, Quaternion.LookRotation(Camera.main.transform.forward));
 
             SoundManager.PlaySound(SoundManager.Sound.OrangePortal);
             Object.Destroy(vfx, 2f);
@@ -53,7 +55,7 @@ public class SpawnProjectile : MonoBehaviour
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out indexPose))
         {
-            vfx = Instantiate(LeftEffectToSpawn, indexPose.Position, Quaternion.LookRotation(Camera.main.transform.forward));
+            vfx = Instantiate(LeftEffectToSpawn, indexPose.Position + offset, Quaternion.LookRotation(Camera.main.transform.forward));
 
             SoundManager.PlaySound(SoundManager.Sound.BluePortal);
             Object.Destroy(vfx, 2f);

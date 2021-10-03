@@ -13,6 +13,8 @@ public class ProjectileMovement : MonoBehaviour
     private RaycastHit hit;
     private bool portal_fire;
 
+    public LayerMask portalTargets;
+
     private void Start()
     {
         portal_fire = true;
@@ -24,7 +26,7 @@ public class ProjectileMovement : MonoBehaviour
             Object.Destroy(muzzleVFX, 1f);
 
             hit = new RaycastHit();
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f, portalTargets))
             {
                 hitLocation = hit.point;
             }
