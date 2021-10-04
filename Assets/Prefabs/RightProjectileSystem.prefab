@@ -9800,7 +9800,7 @@ MonoBehaviour:
   portal: {fileID: 6892434660712649614, guid: 514f01e5d40772a48ad105a327b34202, type: 3}
   portalTargets:
     serializedVersion: 2
-    m_Bits: 2147483703
+    m_Bits: 2147483649
 --- !u!65 &-3775287846204055904
 BoxCollider:
   m_ObjectHideFlags: 0

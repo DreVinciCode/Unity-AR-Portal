@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ProjectileMovement : MonoBehaviour
 {
     public float speed;
     public GameObject muzzleProjectile;
     public GameObject impactProjectile;
     public GameObject portal;
+
+    private Portal portalScript;
 
     private Vector3 hitLocation;
     private RaycastHit hit;
@@ -29,8 +32,10 @@ public class ProjectileMovement : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f, portalTargets))
             {
                 hitLocation = hit.point;
+                portalScript = portal.GetComponentInChildren<Portal>();
+                portalScript.wallCollider = hit.collider;
+                //Debug.Log(hit.collider.gameObject.name);
             }
-
         }
     }
 
@@ -40,19 +45,13 @@ public class ProjectileMovement : MonoBehaviour
         if(speed != 0)
         {
             transform.position += transform.forward * (speed * Time.deltaTime);
-        }
-        else
-        {
-            Debug.Log("Zero Speed");
-        }     
+        }   
 
         if(Vector3.Distance(transform.position, hitLocation) < 1 && portal_fire)
         {
             portal_fire = false;
-            Debug.Log(Vector3.Distance(transform.position, hitLocation));
             Collision();
         }
-
     }
 
     //Create function to replace Collison
@@ -72,41 +71,8 @@ public class ProjectileMovement : MonoBehaviour
         GameObject impactPortal = Instantiate(portal, pos, rot) as GameObject;
         impactPortal.transform.LookAt(hit.point + hit.normal);
 
-
         Object.Destroy(impactVFX, 0.1f);
         Destroy(gameObject);
         portal_fire = true;
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        /*
-        speed = 0;
-
-        ContactPoint contact = collision.GetContact(0);
-        Quaternion rot = Quaternion.FromToRotation(Vector3.one, contact.normal);
-        Vector3 pos = contact.point + contact.normal * 0.001f;
-
-        if(impactProjectile != null)
-        {
-            var impactVFX = Instantiate(impactProjectile, pos, rot);
-
-
-            //Determine if portal is present or not by the game tag. If present, destroy portal
-            if(GameObject.FindGameObjectWithTag(portal.tag))
-            {
-                Destroy(GameObject.FindGameObjectWithTag(portal.tag));
-            }
-
-            GameObject impactPortal = Instantiate(portal, pos, rot) as GameObject;
-            impactPortal.transform.LookAt(contact.point + contact.normal);
-
-
-            Object.Destroy(impactVFX, 0.1f);
-        }
-
-        Destroy(gameObject);
-        */
-    }
-
 }
