@@ -1,22 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-
 using Microsoft.MixedReality.Toolkit.Utilities;
 using Microsoft.MixedReality.Toolkit.Input;
+using UnityEngine;
 
 public class SpawnProjectile : MonoBehaviour
 {
-    //private GameObject firepoint;
+    public Vector3 offset;
     public List<GameObject> vfx = new List<GameObject>();
 
-    MixedRealityPose indexPose;
-
-    public Vector3 offset;
-
+    private MixedRealityPose indexPose;
     private GameObject RightEffectToSpawn, LeftEffectToSpawn;
 
-    // Start is called before the first frame update
     void Start()
     {
         GestureRecognition gestureRecognition = FindObjectOfType<GestureRecognition>();
@@ -36,7 +31,7 @@ public class SpawnProjectile : MonoBehaviour
         RightSpawnVFX();
     }
 
-    void RightSpawnVFX()
+    private void RightSpawnVFX()
     {
         GameObject vfx;
 
@@ -49,7 +44,7 @@ public class SpawnProjectile : MonoBehaviour
         }
     }
 
-    void LeftSpawnVFX()
+    private void LeftSpawnVFX()
     {
         GameObject vfx;
 

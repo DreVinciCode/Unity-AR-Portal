@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3390908991076176030}
   - component: {fileID: 1586393226823995028}
   - component: {fileID: 2877084756429740298}
-  - component: {fileID: 8135827797370801917}
+  - component: {fileID: 5197533844505264486}
   m_Layer: 6
   m_Name: Blue Portal
   m_TagString: PortalBlue
@@ -116,7 +116,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9999999, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8135827797370801917
+--- !u!114 &5197533844505264486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,4 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609d6b59e2dca64997dec96d625130b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <OtherPortal>k__BackingField: {fileID: 1956930446866938707, guid: 6adb8da948a4b854f9b705307ffe799d, type: 3}
+  <ThisPortal>k__BackingField: {fileID: 5018766657363806774, guid: 7202782004825b040a1fbf9c13603813, type: 3}
+  <OtherPortal>k__BackingField: {fileID: 6892434660712649614, guid: 514f01e5d40772a48ad105a327b34202, type: 3}
+  wallCollider: {fileID: 0}

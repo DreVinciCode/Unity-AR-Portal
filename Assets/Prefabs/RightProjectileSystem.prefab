@@ -9798,6 +9798,7 @@ MonoBehaviour:
   muzzleProjectile: {fileID: 4246071946314638450, guid: fbc0ebdc8abdb2246a523bbbc8353abb, type: 3}
   impactProjectile: {fileID: 6888776540272353669, guid: 0bdc8faa23da1054fb599317ccf5406e, type: 3}
   portal: {fileID: 6892434660712649614, guid: 514f01e5d40772a48ad105a327b34202, type: 3}
+  portalScript: {fileID: 0}
   portalTargets:
     serializedVersion: 2
     m_Bits: 2147483649

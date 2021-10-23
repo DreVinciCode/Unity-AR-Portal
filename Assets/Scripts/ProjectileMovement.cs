@@ -8,19 +8,19 @@ public class ProjectileMovement : MonoBehaviour
     public float speed;
     public GameObject muzzleProjectile;
     public GameObject impactProjectile;
-    public GameObject portal;
-
+    public GameObject portal;    
     private Portal portalScript;
+    public LayerMask portalTargets;
 
     private Vector3 hitLocation;
     private RaycastHit hit;
     private bool portal_fire;
 
-    public LayerMask portalTargets;
 
     private void Start()
     {
         portal_fire = true;
+        portalScript = portal.GetComponentInChildren<Portal>();
 
         if (muzzleProjectile != null)
         {
@@ -32,7 +32,6 @@ public class ProjectileMovement : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f, portalTargets))
             {
                 hitLocation = hit.point;
-                portalScript = portal.GetComponentInChildren<Portal>();
                 portalScript.wallCollider = hit.collider;
                 //Debug.Log(hit.collider.gameObject.name);
             }

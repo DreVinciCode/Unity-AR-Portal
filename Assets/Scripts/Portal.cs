@@ -6,7 +6,11 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     [field: SerializeField]
-    public Portal OtherPortal { get; private set; }
+    public GameObject ThisPortal { get; private set; }
+
+    [field: SerializeField]
+    public GameObject OtherPortal { get; private set; }
+
 
     private List<PortalableObject> portalObjects = new List<PortalableObject>();
     public bool IsPlaced { get; private set; } = false;
@@ -19,9 +23,22 @@ public class Portal : MonoBehaviour
     {
         collider = GetComponent<BoxCollider>();
     }
+    private void Start()
+    {
+        ThisPortal = gameObject.transform.parent.gameObject;      
+    }
 
     void Update()
     {
+        if (ThisPortal.tag == "PortalOrange")
+        {
+            OtherPortal = GameObject.FindGameObjectWithTag("PortalBlue");
+        }
+        else
+        {
+            OtherPortal = GameObject.FindGameObjectWithTag("PortalOrange");
+        }
+
         for (int i = 0; i < portalObjects.Count; i++)
         {
             Vector3 objPos = transform.InverseTransformPoint(portalObjects[i].transform.position);
@@ -35,13 +52,12 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Portal collision: " + other.gameObject.name);
 
         var obj = other.GetComponent<PortalableObject>();
         if (obj != null)
         {
             portalObjects.Add(obj);
-            obj.SetIsInPortal(this, OtherPortal, wallCollider);
+            obj.SetIsInPortal(ThisPortal, OtherPortal, wallCollider);
         }
     }
 

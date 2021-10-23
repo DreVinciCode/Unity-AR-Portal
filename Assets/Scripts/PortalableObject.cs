@@ -9,20 +9,18 @@ using UnityEngine;
 public class PortalableObject : MonoBehaviour
 {
     private GameObject clonedObject;
-
     private int inPortalCount = 0;
-
     private new Rigidbody rigidbody;
     private new Collider collider;
-
-    private Portal inPortal;
-    private Portal outPortal;
+    private GameObject inPortal;
+    private GameObject outPortal;
 
     private static readonly Quaternion halfTurn = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 
     protected virtual void Awake()
     {
         clonedObject = new GameObject();
+        clonedObject.name = gameObject.name + " cloned";
         clonedObject.SetActive(false);
         var meshFilter = clonedObject.AddComponent<MeshFilter>();
         var meshRenderer = clonedObject.AddComponent<MeshRenderer>();
@@ -38,10 +36,8 @@ public class PortalableObject : MonoBehaviour
 
     private void LateUpdate()
     {
-        //Check for both portals via tags
         if(GameObject.FindGameObjectWithTag("PortalOrange") == null || GameObject.FindGameObjectWithTag("PortalBlue") == null)
         {
-            //Debug.Log("Not fullfilled");
             return;
         }
 
@@ -65,15 +61,15 @@ public class PortalableObject : MonoBehaviour
             clonedObject.transform.position = new Vector3(-1000.0f, 1000.0f, -1000.0f);
         }
     }
-
-    public void SetIsInPortal(Portal inPortal, Portal outPortal, Collider wallCollider)
+    
+    public void SetIsInPortal(GameObject inPortal, GameObject outPortal, Collider wallCollider)
     {
         this.inPortal = inPortal;
         this.outPortal = outPortal;
 
         Physics.IgnoreCollision(collider, wallCollider);
 
-        clonedObject.SetActive(false);
+        clonedObject.SetActive(true);
 
         ++inPortalCount;
     }
