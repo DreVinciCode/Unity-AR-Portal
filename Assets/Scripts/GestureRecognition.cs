@@ -230,7 +230,6 @@ public class GestureRecognition : MonoBehaviour
         else
         {
             return gestures[0];
-        }
-        
+        }     
     }
 }

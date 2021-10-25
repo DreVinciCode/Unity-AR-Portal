@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 public class ProjectileMovement : MonoBehaviour
@@ -8,7 +9,7 @@ public class ProjectileMovement : MonoBehaviour
     public float speed;
     public GameObject muzzleProjectile;
     public GameObject impactProjectile;
-    public GameObject portal;    
+    public GameObject portal;
     private Portal portalScript;
     public LayerMask portalTargets;
 
@@ -38,8 +39,7 @@ public class ProjectileMovement : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {   
         if(speed != 0)
         {
@@ -69,6 +69,7 @@ public class ProjectileMovement : MonoBehaviour
 
         GameObject impactPortal = Instantiate(portal, pos, rot) as GameObject;
         impactPortal.transform.LookAt(hit.point + hit.normal);
+
 
         Object.Destroy(impactVFX, 0.1f);
         Destroy(gameObject);
