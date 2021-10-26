@@ -34,7 +34,6 @@ public class ProjectileMovement : MonoBehaviour
             {
                 hitLocation = hit.point;
                 portalScript.wallCollider = hit.collider;
-                //Debug.Log(hit.collider.gameObject.name);
             }
         }
     }
@@ -73,7 +72,6 @@ public class ProjectileMovement : MonoBehaviour
 
         GameObject impactPortal = Instantiate(portal, pos, rot) as GameObject;
         impactPortal.transform.LookAt(hit.point + hit.normal);
-
 
         Object.Destroy(impactVFX, 0.1f);
         Destroy(gameObject);
