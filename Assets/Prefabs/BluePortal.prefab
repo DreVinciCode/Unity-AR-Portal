@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5018766656798233057}
   m_Layer: 6
   m_Name: Particle System
-  m_TagString: Untagged
+  m_TagString: PortalBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4864,7 +4864,7 @@ GameObject:
   - component: {fileID: 5018766657980679616}
   m_Layer: 6
   m_Name: Dark Beam
-  m_TagString: Untagged
+  m_TagString: PortalBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9764,9 +9764,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5197533844505264486, guid: 299353e8c8df45442977c5c1abe4dc88, type: 3}
+      propertyPath: <ThisPortal>k__BackingField
+      value: 
+      objectReference: {fileID: 5018766657363806774}
     - target: {fileID: 6647250496331982133, guid: 299353e8c8df45442977c5c1abe4dc88, type: 3}
       propertyPath: m_Name
       value: Blue Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647250496331982133, guid: 299353e8c8df45442977c5c1abe4dc88, type: 3}
+      propertyPath: m_TagString
+      value: PortalBlue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 299353e8c8df45442977c5c1abe4dc88, type: 3}

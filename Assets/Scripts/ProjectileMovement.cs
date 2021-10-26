@@ -62,9 +62,13 @@ public class ProjectileMovement : MonoBehaviour
         var impactVFX = Instantiate(impactProjectile, pos, rot);
 
         //Determine if portal is present or not by the game tag. If present, destroy portal
-        if (GameObject.FindGameObjectWithTag(portal.tag))
+        if (GameObject.FindGameObjectsWithTag(portal.tag).Length >= 1)
         {
-            Destroy(GameObject.FindGameObjectWithTag(portal.tag));
+            GameObject[] objects = GameObject.FindGameObjectsWithTag(portal.tag);
+            foreach (GameObject obj in objects)
+            {
+                GameObject.Destroy(obj);
+            }
         }
 
         GameObject impactPortal = Instantiate(portal, pos, rot) as GameObject;

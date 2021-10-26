@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5416504029809638736}
   m_Layer: 6
   m_Name: Orange Portal
-  m_TagString: PortalOrange
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
