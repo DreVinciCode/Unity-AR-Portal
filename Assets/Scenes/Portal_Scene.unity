@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SavedSceneNamePrefix: Scene
-  InstantiatePrefabs: 0
+  InstantiatePrefabs: 1
   InstantiatedPrefab: {fileID: 4450459432874784414, guid: da7ef0d2c42bf8f4da89848ed8529a9f, type: 3}
   InstantiatedParent: {fileID: 611194812}
   autoUpdateToggle: {fileID: 1833069578}
@@ -562,6 +562,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7574987724006477679, guid: 49b2cb8891a8f5a4eac0cb90abf1ccb4, type: 3}
+      propertyPath: hostTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -7574987724006477679, guid: 49b2cb8891a8f5a4eac0cb90abf1ccb4, type: 3}
+      propertyPath: constraintsManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1353942141782880513, guid: 49b2cb8891a8f5a4eac0cb90abf1ccb4, type: 3}
       propertyPath: m_Mass
       value: 1
