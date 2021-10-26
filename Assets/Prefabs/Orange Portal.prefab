@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2024932955373405922}
   - component: {fileID: 6696516976940578301}
   - component: {fileID: 7342032097999219703}
-  - component: {fileID: 2296912874248830883}
-  - component: {fileID: -5416504029809638736}
+  - component: {fileID: 7116840496561164869}
+  - component: {fileID: 5468703681276291160}
   m_Layer: 6
   m_Name: Orange Portal
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &2296912874248830883
+--- !u!65 &7116840496561164869
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,9 +114,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9999999, z: 0.03996241}
-  m_Center: {x: 0, y: 0, z: 0.0025640102}
---- !u!114 &-5416504029809638736
+  m_Size: {x: 1.2, y: 1.2, z: 0.018743463}
+  m_Center: {x: 0, y: 0, z: -0.013064135}
+--- !u!114 &5468703681276291160
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

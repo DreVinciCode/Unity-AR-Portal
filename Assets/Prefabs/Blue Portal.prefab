@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8068799874699617153}
   - component: {fileID: 3390908991076176030}
   - component: {fileID: 1586393226823995028}
-  - component: {fileID: 2877084756429740298}
-  - component: {fileID: 5197533844505264486}
+  - component: {fileID: 8884683284607580163}
+  - component: {fileID: 299798629133865484}
   m_Layer: 6
   m_Name: Blue Portal
   m_TagString: PortalBlue
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &2877084756429740298
+--- !u!65 &8884683284607580163
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,9 +114,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9999999, z: 0.03996241}
-  m_Center: {x: 0, y: 0, z: 0.0025640102}
---- !u!114 &5197533844505264486
+  m_Size: {x: 1.2, y: 1.2, z: 0.02685237}
+  m_Center: {x: -0, y: 0, z: -0.013426185}
+--- !u!114 &299798629133865484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

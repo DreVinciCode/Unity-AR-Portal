@@ -9691,7 +9691,7 @@ Transform:
   m_GameObject: {fileID: 6892434660712649614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3666, y: 0.06579884, z: 0.91079426}
-  m_LocalScale: {x: 0.5805073, y: 1.0090958, z: 0.5805073}
+  m_LocalScale: {x: 0.7, y: 1.0090958, z: 0.5805073}
   m_Children:
   - {fileID: 3473506346002773163}
   - {fileID: 6892434660201597016}
@@ -9718,6 +9718,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PortalOrange
       objectReference: {fileID: 0}
+    - target: {fileID: 5468703681276291160, guid: 6adb8da948a4b854f9b705307ffe799d, type: 3}
+      propertyPath: <ThisPortal>k__BackingField
+      value: 
+      objectReference: {fileID: 6892434660712649614}
     - target: {fileID: 6562260806136942188, guid: 6adb8da948a4b854f9b705307ffe799d, type: 3}
       propertyPath: m_RootOrder
       value: 0

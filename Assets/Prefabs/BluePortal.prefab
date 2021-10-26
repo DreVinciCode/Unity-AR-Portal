@@ -4829,7 +4829,7 @@ Transform:
   m_GameObject: {fileID: 5018766657363806774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.429085, y: 0.0020493611, z: -8.932524}
-  m_LocalScale: {x: 0.5805073, y: 1.0090958, z: 0.5805073}
+  m_LocalScale: {x: 0.7, y: 1.0090958, z: 0.5805073}
   m_Children:
   - {fileID: 3041261252986793235}
   - {fileID: 5018766656798233056}
@@ -9706,6 +9706,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5018766657363806762}
     m_Modifications:
+    - target: {fileID: 299798629133865484, guid: 299353e8c8df45442977c5c1abe4dc88, type: 3}
+      propertyPath: <ThisPortal>k__BackingField
+      value: 
+      objectReference: {fileID: 5018766657363806774}
     - target: {fileID: 2950409815411567375, guid: 299353e8c8df45442977c5c1abe4dc88, type: 3}
       propertyPath: m_RootOrder
       value: 0
