@@ -4,3 +4,5 @@ Repo containing project that attempts to create the portals from the popular gam
 I'm using MRTK Scene Understanding to detect the walls/floors/ceilings. Important to uncheck auto updating in Windows Scene Understanding Observer
 (Hierarchy>MixedRealityToolkit>Spatial Awareness>Windows Scene Understanding Observer Settings)
 
+![Alt text](Demo/demo.gif)
+<br/> A Short Demo of Current Progress
