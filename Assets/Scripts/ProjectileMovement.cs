@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class ProjectileMovement : MonoBehaviour
 {
@@ -8,16 +10,18 @@ public class ProjectileMovement : MonoBehaviour
     public GameObject muzzleProjectile;
     public GameObject impactProjectile;
     public GameObject portal;
+    private Portal portalScript;
+    public LayerMask portalTargets;
 
     private Vector3 hitLocation;
     private RaycastHit hit;
     private bool portal_fire;
 
-    public LayerMask portalTargets;
 
     private void Start()
     {
         portal_fire = true;
+        portalScript = portal.GetComponentInChildren<Portal>();
 
         if (muzzleProjectile != null)
         {
@@ -29,30 +33,23 @@ public class ProjectileMovement : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f, portalTargets))
             {
                 hitLocation = hit.point;
+                portalScript.wallCollider = hit.collider;
             }
-
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {   
         if(speed != 0)
         {
             transform.position += transform.forward * (speed * Time.deltaTime);
-        }
-        else
-        {
-            Debug.Log("Zero Speed");
-        }     
+        }   
 
         if(Vector3.Distance(transform.position, hitLocation) < 1 && portal_fire)
         {
             portal_fire = false;
-            Debug.Log(Vector3.Distance(transform.position, hitLocation));
             Collision();
         }
-
     }
 
     //Create function to replace Collison
@@ -64,49 +61,20 @@ public class ProjectileMovement : MonoBehaviour
         var impactVFX = Instantiate(impactProjectile, pos, rot);
 
         //Determine if portal is present or not by the game tag. If present, destroy portal
-        if (GameObject.FindGameObjectWithTag(portal.tag))
+        if (GameObject.FindGameObjectsWithTag(portal.tag).Length >= 1)
         {
-            Destroy(GameObject.FindGameObjectWithTag(portal.tag));
+            GameObject[] objects = GameObject.FindGameObjectsWithTag(portal.tag);
+            foreach (GameObject obj in objects)
+            {
+                GameObject.Destroy(obj);
+            }
         }
 
         GameObject impactPortal = Instantiate(portal, pos, rot) as GameObject;
         impactPortal.transform.LookAt(hit.point + hit.normal);
 
-
         Object.Destroy(impactVFX, 0.1f);
         Destroy(gameObject);
         portal_fire = true;
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        /*
-        speed = 0;
-
-        ContactPoint contact = collision.GetContact(0);
-        Quaternion rot = Quaternion.FromToRotation(Vector3.one, contact.normal);
-        Vector3 pos = contact.point + contact.normal * 0.001f;
-
-        if(impactProjectile != null)
-        {
-            var impactVFX = Instantiate(impactProjectile, pos, rot);
-
-
-            //Determine if portal is present or not by the game tag. If present, destroy portal
-            if(GameObject.FindGameObjectWithTag(portal.tag))
-            {
-                Destroy(GameObject.FindGameObjectWithTag(portal.tag));
-            }
-
-            GameObject impactPortal = Instantiate(portal, pos, rot) as GameObject;
-            impactPortal.transform.LookAt(contact.point + contact.normal);
-
-
-            Object.Destroy(impactVFX, 0.1f);
-        }
-
-        Destroy(gameObject);
-        */
-    }
-
 }

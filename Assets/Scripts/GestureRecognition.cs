@@ -35,7 +35,6 @@ public class GestureRecognition : MonoBehaviour
     public event EventHandler OnRightFireDetected;
     public event EventHandler OnSnapDetected;
 
-
     private float curlAverage;
     private float threshold = 0.1f;
 
@@ -60,6 +59,7 @@ public class GestureRecognition : MonoBehaviour
         leftIndexObject = Instantiate(leftHandIndexMarker, this.transform);
         rightIndextObject = Instantiate(rightHandIndexMarker, this.transform);
         left_fire_timer = 0;
+        right_fire_timer = 0;
     }
 
     // Update is called once per frame
@@ -230,7 +230,6 @@ public class GestureRecognition : MonoBehaviour
         else
         {
             return gestures[0];
-        }
-        
+        }     
     }
 }
