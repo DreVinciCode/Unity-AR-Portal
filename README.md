@@ -6,3 +6,8 @@ I'm using MRTK Scene Understanding to detect the walls/floors/ceilings. Importan
 
 ![Alt text](Demo/demo.gif)
 <br/> A Short Demo of Current Progress
+
+
+Next Steps:
+1) Add sound effects for any objects that go through the portal
+2) Change the cube summon gesture; Use voice instead?
