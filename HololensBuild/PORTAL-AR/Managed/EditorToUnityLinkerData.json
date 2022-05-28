@@ -929,13 +929,6 @@
         {
             "managedAssemblyName": "Microsoft.MixedReality.Toolkit.SDK.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Microsoft.MixedReality.Toolkit.SDK.dll",
-            "nativeClass": "",
             "fullManagedTypeName": "Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView",
             "moduleName": "",
             "usedInScenes": []
@@ -1007,13 +1000,6 @@
             "managedAssemblyName": "Microsoft.MixedReality.Toolkit.dll",
             "nativeClass": "",
             "fullManagedTypeName": "Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Microsoft.MixedReality.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "Microsoft.MixedReality.Toolkit.Input.HandBounds",
             "moduleName": "",
             "usedInScenes": []
         },

@@ -121,7 +121,6 @@
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.States" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.UI.Theme" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection" preserve="nothing"/>
-		<type fullname="Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler" preserve="nothing"/>
 	</assembly>
@@ -141,7 +140,6 @@
 		<type fullname="Microsoft.MixedReality.Toolkit.Boundary.MixedRealityBoundaryVisualizationProfile" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Diagnostics.MixedRealityDiagnosticsProfile" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer" preserve="nothing"/>
-		<type fullname="Microsoft.MixedReality.Toolkit.Input.HandBounds" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerMappingProfile" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizationProfile" preserve="nothing"/>
 		<type fullname="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile" preserve="nothing"/>

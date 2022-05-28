@@ -70,6 +70,10 @@ public class GestureRecognition : MonoBehaviour
         float ringCurl = HandPoseUtils.RingFingerCurl(Handedness.Both);
         float pinkyCurl = HandPoseUtils.PinkyFingerCurl(Handedness.Both);
 
+        if(thumbCurl < 0.4f && indexCurl < 0.05f && middleCurl < 0.05f && ringCurl < 0.05f && pinkyCurl < 0.05f)
+        {
+            CubeSummon();
+        }
 
         //Approach to detect a finger snap for now; until a better method can be introduced.
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Both, out thumbPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Both, out middlePose))
