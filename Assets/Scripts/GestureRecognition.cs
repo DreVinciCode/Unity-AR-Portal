@@ -62,7 +62,6 @@ public class GestureRecognition : MonoBehaviour
         right_fire_timer = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float thumbCurl = HandPoseUtils.ThumbFingerCurl(Handedness.Both);
@@ -70,6 +69,7 @@ public class GestureRecognition : MonoBehaviour
         float middleCurl = HandPoseUtils.MiddleFingerCurl(Handedness.Both);
         float ringCurl = HandPoseUtils.RingFingerCurl(Handedness.Both);
         float pinkyCurl = HandPoseUtils.PinkyFingerCurl(Handedness.Both);
+
 
         //Approach to detect a finger snap for now; until a better method can be introduced.
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Both, out thumbPose) && HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Both, out middlePose))
@@ -112,7 +112,6 @@ public class GestureRecognition : MonoBehaviour
         if(Input.GetMouseButtonDown(1))
         {
             OnLeftFireDetected?.Invoke(this, EventArgs.Empty);
-
         }
 
         Gesture currentGesture = RecognizedGesture();
@@ -178,7 +177,11 @@ public class GestureRecognition : MonoBehaviour
             right_fire_timer -= Time.deltaTime;
             OnRightFireDetected?.Invoke(this, EventArgs.Empty);
         }
+    }
 
+    public void CubeSummon()
+    {
+        OnSnapDetected?.Invoke(this, EventArgs.Empty);
     }
 
     Gesture RecognizedGesture()
@@ -222,7 +225,6 @@ public class GestureRecognition : MonoBehaviour
         {
             return gestures[1];
         }
-
         else if (thumbCurl > 0.7  && middleCurl > 0.3 && ringCurl > 0.3 && pinkyCurl > 0.3)
         {
             return gestures[2];
