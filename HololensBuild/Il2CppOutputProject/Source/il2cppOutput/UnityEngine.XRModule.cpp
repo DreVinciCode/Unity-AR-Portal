@@ -6056,10 +6056,16 @@ public:
 	RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  ___renderTarget_2;
 	// UnityEngine.RenderTextureDescriptor UnityEngine.XR.XRDisplaySubsystem/XRRenderPass::renderTargetDesc
 	RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  ___renderTargetDesc_3;
+	// System.Boolean UnityEngine.XR.XRDisplaySubsystem/XRRenderPass::hasMotionVectorPass
+	bool ___hasMotionVectorPass_4;
+	// UnityEngine.Rendering.RenderTargetIdentifier UnityEngine.XR.XRDisplaySubsystem/XRRenderPass::motionVectorRenderTarget
+	RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  ___motionVectorRenderTarget_5;
+	// UnityEngine.RenderTextureDescriptor UnityEngine.XR.XRDisplaySubsystem/XRRenderPass::motionVectorRenderTargetDesc
+	RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  ___motionVectorRenderTargetDesc_6;
 	// System.Boolean UnityEngine.XR.XRDisplaySubsystem/XRRenderPass::shouldFillOutDepth
-	bool ___shouldFillOutDepth_4;
+	bool ___shouldFillOutDepth_7;
 	// System.Int32 UnityEngine.XR.XRDisplaySubsystem/XRRenderPass::cullingPassIndex
-	int32_t ___cullingPassIndex_5;
+	int32_t ___cullingPassIndex_8;
 
 public:
 	inline static int32_t get_offset_of_displaySubsystemInstance_0() { return static_cast<int32_t>(offsetof(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB, ___displaySubsystemInstance_0)); }
@@ -6094,20 +6100,44 @@ public:
 		___renderTargetDesc_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shouldFillOutDepth_4() { return static_cast<int32_t>(offsetof(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB, ___shouldFillOutDepth_4)); }
-	inline bool get_shouldFillOutDepth_4() const { return ___shouldFillOutDepth_4; }
-	inline bool* get_address_of_shouldFillOutDepth_4() { return &___shouldFillOutDepth_4; }
-	inline void set_shouldFillOutDepth_4(bool value)
+	inline static int32_t get_offset_of_hasMotionVectorPass_4() { return static_cast<int32_t>(offsetof(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB, ___hasMotionVectorPass_4)); }
+	inline bool get_hasMotionVectorPass_4() const { return ___hasMotionVectorPass_4; }
+	inline bool* get_address_of_hasMotionVectorPass_4() { return &___hasMotionVectorPass_4; }
+	inline void set_hasMotionVectorPass_4(bool value)
 	{
-		___shouldFillOutDepth_4 = value;
+		___hasMotionVectorPass_4 = value;
 	}
 
-	inline static int32_t get_offset_of_cullingPassIndex_5() { return static_cast<int32_t>(offsetof(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB, ___cullingPassIndex_5)); }
-	inline int32_t get_cullingPassIndex_5() const { return ___cullingPassIndex_5; }
-	inline int32_t* get_address_of_cullingPassIndex_5() { return &___cullingPassIndex_5; }
-	inline void set_cullingPassIndex_5(int32_t value)
+	inline static int32_t get_offset_of_motionVectorRenderTarget_5() { return static_cast<int32_t>(offsetof(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB, ___motionVectorRenderTarget_5)); }
+	inline RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  get_motionVectorRenderTarget_5() const { return ___motionVectorRenderTarget_5; }
+	inline RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13 * get_address_of_motionVectorRenderTarget_5() { return &___motionVectorRenderTarget_5; }
+	inline void set_motionVectorRenderTarget_5(RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  value)
 	{
-		___cullingPassIndex_5 = value;
+		___motionVectorRenderTarget_5 = value;
+	}
+
+	inline static int32_t get_offset_of_motionVectorRenderTargetDesc_6() { return static_cast<int32_t>(offsetof(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB, ___motionVectorRenderTargetDesc_6)); }
+	inline RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  get_motionVectorRenderTargetDesc_6() const { return ___motionVectorRenderTargetDesc_6; }
+	inline RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47 * get_address_of_motionVectorRenderTargetDesc_6() { return &___motionVectorRenderTargetDesc_6; }
+	inline void set_motionVectorRenderTargetDesc_6(RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  value)
+	{
+		___motionVectorRenderTargetDesc_6 = value;
+	}
+
+	inline static int32_t get_offset_of_shouldFillOutDepth_7() { return static_cast<int32_t>(offsetof(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB, ___shouldFillOutDepth_7)); }
+	inline bool get_shouldFillOutDepth_7() const { return ___shouldFillOutDepth_7; }
+	inline bool* get_address_of_shouldFillOutDepth_7() { return &___shouldFillOutDepth_7; }
+	inline void set_shouldFillOutDepth_7(bool value)
+	{
+		___shouldFillOutDepth_7 = value;
+	}
+
+	inline static int32_t get_offset_of_cullingPassIndex_8() { return static_cast<int32_t>(offsetof(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB, ___cullingPassIndex_8)); }
+	inline int32_t get_cullingPassIndex_8() const { return ___cullingPassIndex_8; }
+	inline int32_t* get_address_of_cullingPassIndex_8() { return &___cullingPassIndex_8; }
+	inline void set_cullingPassIndex_8(int32_t value)
+	{
+		___cullingPassIndex_8 = value;
 	}
 };
 
@@ -6118,8 +6148,11 @@ struct XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshaled_pinvoke
 	int32_t ___renderPassIndex_1;
 	RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  ___renderTarget_2;
 	RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  ___renderTargetDesc_3;
-	int32_t ___shouldFillOutDepth_4;
-	int32_t ___cullingPassIndex_5;
+	int32_t ___hasMotionVectorPass_4;
+	RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  ___motionVectorRenderTarget_5;
+	RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  ___motionVectorRenderTargetDesc_6;
+	int32_t ___shouldFillOutDepth_7;
+	int32_t ___cullingPassIndex_8;
 };
 // Native definition for COM marshalling of UnityEngine.XR.XRDisplaySubsystem/XRRenderPass
 struct XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshaled_com
@@ -6128,8 +6161,11 @@ struct XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshaled_com
 	int32_t ___renderPassIndex_1;
 	RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  ___renderTarget_2;
 	RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  ___renderTargetDesc_3;
-	int32_t ___shouldFillOutDepth_4;
-	int32_t ___cullingPassIndex_5;
+	int32_t ___hasMotionVectorPass_4;
+	RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  ___motionVectorRenderTarget_5;
+	RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  ___motionVectorRenderTargetDesc_6;
+	int32_t ___shouldFillOutDepth_7;
+	int32_t ___cullingPassIndex_8;
 };
 
 // System.ArgumentNullException
@@ -12567,8 +12603,11 @@ IL2CPP_EXTERN_C void XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_mars
 	marshaled.___renderPassIndex_1 = unmarshaled.get_renderPassIndex_1();
 	marshaled.___renderTarget_2 = unmarshaled.get_renderTarget_2();
 	marshaled.___renderTargetDesc_3 = unmarshaled.get_renderTargetDesc_3();
-	marshaled.___shouldFillOutDepth_4 = static_cast<int32_t>(unmarshaled.get_shouldFillOutDepth_4());
-	marshaled.___cullingPassIndex_5 = unmarshaled.get_cullingPassIndex_5();
+	marshaled.___hasMotionVectorPass_4 = static_cast<int32_t>(unmarshaled.get_hasMotionVectorPass_4());
+	marshaled.___motionVectorRenderTarget_5 = unmarshaled.get_motionVectorRenderTarget_5();
+	marshaled.___motionVectorRenderTargetDesc_6 = unmarshaled.get_motionVectorRenderTargetDesc_6();
+	marshaled.___shouldFillOutDepth_7 = static_cast<int32_t>(unmarshaled.get_shouldFillOutDepth_7());
+	marshaled.___cullingPassIndex_8 = unmarshaled.get_cullingPassIndex_8();
 }
 IL2CPP_EXTERN_C void XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshal_pinvoke_back(const XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshaled_pinvoke& marshaled, XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB& unmarshaled)
 {
@@ -12587,12 +12626,23 @@ IL2CPP_EXTERN_C void XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_mars
 	memset((&unmarshaled_renderTargetDesc_temp_3), 0, sizeof(unmarshaled_renderTargetDesc_temp_3));
 	unmarshaled_renderTargetDesc_temp_3 = marshaled.___renderTargetDesc_3;
 	unmarshaled.set_renderTargetDesc_3(unmarshaled_renderTargetDesc_temp_3);
-	bool unmarshaled_shouldFillOutDepth_temp_4 = false;
-	unmarshaled_shouldFillOutDepth_temp_4 = static_cast<bool>(marshaled.___shouldFillOutDepth_4);
-	unmarshaled.set_shouldFillOutDepth_4(unmarshaled_shouldFillOutDepth_temp_4);
-	int32_t unmarshaled_cullingPassIndex_temp_5 = 0;
-	unmarshaled_cullingPassIndex_temp_5 = marshaled.___cullingPassIndex_5;
-	unmarshaled.set_cullingPassIndex_5(unmarshaled_cullingPassIndex_temp_5);
+	bool unmarshaled_hasMotionVectorPass_temp_4 = false;
+	unmarshaled_hasMotionVectorPass_temp_4 = static_cast<bool>(marshaled.___hasMotionVectorPass_4);
+	unmarshaled.set_hasMotionVectorPass_4(unmarshaled_hasMotionVectorPass_temp_4);
+	RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  unmarshaled_motionVectorRenderTarget_temp_5;
+	memset((&unmarshaled_motionVectorRenderTarget_temp_5), 0, sizeof(unmarshaled_motionVectorRenderTarget_temp_5));
+	unmarshaled_motionVectorRenderTarget_temp_5 = marshaled.___motionVectorRenderTarget_5;
+	unmarshaled.set_motionVectorRenderTarget_5(unmarshaled_motionVectorRenderTarget_temp_5);
+	RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  unmarshaled_motionVectorRenderTargetDesc_temp_6;
+	memset((&unmarshaled_motionVectorRenderTargetDesc_temp_6), 0, sizeof(unmarshaled_motionVectorRenderTargetDesc_temp_6));
+	unmarshaled_motionVectorRenderTargetDesc_temp_6 = marshaled.___motionVectorRenderTargetDesc_6;
+	unmarshaled.set_motionVectorRenderTargetDesc_6(unmarshaled_motionVectorRenderTargetDesc_temp_6);
+	bool unmarshaled_shouldFillOutDepth_temp_7 = false;
+	unmarshaled_shouldFillOutDepth_temp_7 = static_cast<bool>(marshaled.___shouldFillOutDepth_7);
+	unmarshaled.set_shouldFillOutDepth_7(unmarshaled_shouldFillOutDepth_temp_7);
+	int32_t unmarshaled_cullingPassIndex_temp_8 = 0;
+	unmarshaled_cullingPassIndex_temp_8 = marshaled.___cullingPassIndex_8;
+	unmarshaled.set_cullingPassIndex_8(unmarshaled_cullingPassIndex_temp_8);
 }
 // Conversion method for clean up from marshalling of: UnityEngine.XR.XRDisplaySubsystem/XRRenderPass
 IL2CPP_EXTERN_C void XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshal_pinvoke_cleanup(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshaled_pinvoke& marshaled)
@@ -12605,8 +12655,11 @@ IL2CPP_EXTERN_C void XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_mars
 	marshaled.___renderPassIndex_1 = unmarshaled.get_renderPassIndex_1();
 	marshaled.___renderTarget_2 = unmarshaled.get_renderTarget_2();
 	marshaled.___renderTargetDesc_3 = unmarshaled.get_renderTargetDesc_3();
-	marshaled.___shouldFillOutDepth_4 = static_cast<int32_t>(unmarshaled.get_shouldFillOutDepth_4());
-	marshaled.___cullingPassIndex_5 = unmarshaled.get_cullingPassIndex_5();
+	marshaled.___hasMotionVectorPass_4 = static_cast<int32_t>(unmarshaled.get_hasMotionVectorPass_4());
+	marshaled.___motionVectorRenderTarget_5 = unmarshaled.get_motionVectorRenderTarget_5();
+	marshaled.___motionVectorRenderTargetDesc_6 = unmarshaled.get_motionVectorRenderTargetDesc_6();
+	marshaled.___shouldFillOutDepth_7 = static_cast<int32_t>(unmarshaled.get_shouldFillOutDepth_7());
+	marshaled.___cullingPassIndex_8 = unmarshaled.get_cullingPassIndex_8();
 }
 IL2CPP_EXTERN_C void XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshal_com_back(const XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshaled_com& marshaled, XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB& unmarshaled)
 {
@@ -12625,12 +12678,23 @@ IL2CPP_EXTERN_C void XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_mars
 	memset((&unmarshaled_renderTargetDesc_temp_3), 0, sizeof(unmarshaled_renderTargetDesc_temp_3));
 	unmarshaled_renderTargetDesc_temp_3 = marshaled.___renderTargetDesc_3;
 	unmarshaled.set_renderTargetDesc_3(unmarshaled_renderTargetDesc_temp_3);
-	bool unmarshaled_shouldFillOutDepth_temp_4 = false;
-	unmarshaled_shouldFillOutDepth_temp_4 = static_cast<bool>(marshaled.___shouldFillOutDepth_4);
-	unmarshaled.set_shouldFillOutDepth_4(unmarshaled_shouldFillOutDepth_temp_4);
-	int32_t unmarshaled_cullingPassIndex_temp_5 = 0;
-	unmarshaled_cullingPassIndex_temp_5 = marshaled.___cullingPassIndex_5;
-	unmarshaled.set_cullingPassIndex_5(unmarshaled_cullingPassIndex_temp_5);
+	bool unmarshaled_hasMotionVectorPass_temp_4 = false;
+	unmarshaled_hasMotionVectorPass_temp_4 = static_cast<bool>(marshaled.___hasMotionVectorPass_4);
+	unmarshaled.set_hasMotionVectorPass_4(unmarshaled_hasMotionVectorPass_temp_4);
+	RenderTargetIdentifier_t70F41F3016FFCC4AAF4D7C57F280818114534C13  unmarshaled_motionVectorRenderTarget_temp_5;
+	memset((&unmarshaled_motionVectorRenderTarget_temp_5), 0, sizeof(unmarshaled_motionVectorRenderTarget_temp_5));
+	unmarshaled_motionVectorRenderTarget_temp_5 = marshaled.___motionVectorRenderTarget_5;
+	unmarshaled.set_motionVectorRenderTarget_5(unmarshaled_motionVectorRenderTarget_temp_5);
+	RenderTextureDescriptor_t67FF189E1F35AEB5D6C43A2D7103F3A8A8CA0B47  unmarshaled_motionVectorRenderTargetDesc_temp_6;
+	memset((&unmarshaled_motionVectorRenderTargetDesc_temp_6), 0, sizeof(unmarshaled_motionVectorRenderTargetDesc_temp_6));
+	unmarshaled_motionVectorRenderTargetDesc_temp_6 = marshaled.___motionVectorRenderTargetDesc_6;
+	unmarshaled.set_motionVectorRenderTargetDesc_6(unmarshaled_motionVectorRenderTargetDesc_temp_6);
+	bool unmarshaled_shouldFillOutDepth_temp_7 = false;
+	unmarshaled_shouldFillOutDepth_temp_7 = static_cast<bool>(marshaled.___shouldFillOutDepth_7);
+	unmarshaled.set_shouldFillOutDepth_7(unmarshaled_shouldFillOutDepth_temp_7);
+	int32_t unmarshaled_cullingPassIndex_temp_8 = 0;
+	unmarshaled_cullingPassIndex_temp_8 = marshaled.___cullingPassIndex_8;
+	unmarshaled.set_cullingPassIndex_8(unmarshaled_cullingPassIndex_temp_8);
 }
 // Conversion method for clean up from marshalling of: UnityEngine.XR.XRDisplaySubsystem/XRRenderPass
 IL2CPP_EXTERN_C void XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshal_com_cleanup(XRRenderPass_tCB4A9F3B07C2C59889BD3EE40F44E9347A2BC9BB_marshaled_com& marshaled)

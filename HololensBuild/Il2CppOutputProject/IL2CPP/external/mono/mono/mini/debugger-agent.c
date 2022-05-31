@@ -4323,9 +4323,7 @@ thread_end (MonoProfiler *prof, uintptr_t tid)
 			/* FIXME: Maybe we need to free this instead, but some code can't handle that */
 			tls->terminated = TRUE;
 			/* Can't remove from tid_to_thread, as that would defeat the check in thread_start () */
-#ifndef RUNTIME_IL2CPP
 			MONO_GC_UNREGISTER_ROOT (tls->thread);
-#endif // !RUNTIME_IL2CPP
 			mono_gc_wbarrier_generic_store((void**)&tls->thread, NULL);
 		}
 	}

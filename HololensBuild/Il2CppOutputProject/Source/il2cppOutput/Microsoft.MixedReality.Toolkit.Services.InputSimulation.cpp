@@ -32807,7 +32807,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0_U3C_cctorU3Eb__
 IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_HandJointDataGenerator_t17D1FD847E9A032BFA2F6643426EA96B62E57E23 (HandJointDataGenerator_t17D1FD847E9A032BFA2F6643426EA96B62E57E23 * __this, MixedRealityPoseU5BU5D_tA1142F9D53E46D3F7363AD0147E05E55158630E2* ___jointPoses0, const RuntimeMethod* method)
 {
 	typedef void (DEFAULT_CALL *PInvokeFunc)(MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
 
 	// Marshaling of parameter '___jointPoses0' to native representation
 	MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * ____jointPoses0_marshaled = NULL;
@@ -32956,7 +32956,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandJointDataGenerator_EndInvoke_m0917EE
 IL2CPP_EXTERN_C  MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8  DelegatePInvokeWrapper_MotionControllerPoseUpdater_t5E2A13DE182BF655E2EBAFD308CFD90BF52E2C6C (MotionControllerPoseUpdater_t5E2A13DE182BF655E2EBAFD308CFD90BF52E2C6C * __this, const RuntimeMethod* method)
 {
 	typedef MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8  (DEFAULT_CALL *PInvokeFunc)();
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
 
 	// Native function invocation
 	MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8  returnValue = il2cppPInvokeFunc();

@@ -31584,7 +31584,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass57_0_U3CCreateResta
 IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_ReceiveNativeEventDelegate_t34641E86FBD0380CE83C7C3827A33D9D531991D7 (ReceiveNativeEventDelegate_t34641E86FBD0380CE83C7C3827A33D9D531991D7 * __this, int32_t ___e0, uint64_t ___payload1, const RuntimeMethod* method)
 {
 	typedef void (DEFAULT_CALL *PInvokeFunc)(int32_t, uint64_t);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
 
 	// Native function invocation
 	il2cppPInvokeFunc(___e0, ___payload1);

@@ -58,16 +58,16 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[4] =
 };
 static const int32_t s_InvokerIndices[10] = 
 {
-	5294,
-	5294,
-	5294,
-	4290,
-	5188,
-	5188,
-	5294,
-	5294,
-	5294,
-	4290,
+	5293,
+	5293,
+	5293,
+	4289,
+	5187,
+	5187,
+	5293,
+	5293,
+	5293,
+	4289,
 };
 extern const CustomAttributesCacheGenerator g_Microsoft_MixedReality_Toolkit_Demos_Gltf_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_MixedReality_Toolkit_Demos_Gltf_CodeGenModule;

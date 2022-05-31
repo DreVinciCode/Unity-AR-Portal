@@ -2539,6 +2539,12 @@
             "baseModule": "Core"
         },
         {
+            "name": "AndroidAssetPackImporter",
+            "module": "Editor",
+            "baseName": "AssetImporter",
+            "baseModule": "Editor"
+        },
+        {
             "name": "AssemblyDefinitionImporter",
             "module": "Editor",
             "baseName": "AssetImporter",

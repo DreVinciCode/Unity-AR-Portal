@@ -16251,7 +16251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * U3CUpdateListOverTimeU3Ed__33
 IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_TargetGroupEventHandler_t66CE33FDFBE0D7F0762B0C3BB924D7154837C0D9 (TargetGroupEventHandler_t66CE33FDFBE0D7F0762B0C3BB924D7154837C0D9 * __this, const RuntimeMethod* method)
 {
 	typedef void (DEFAULT_CALL *PInvokeFunc)();
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
 
 	// Native function invocation
 	il2cppPInvokeFunc();

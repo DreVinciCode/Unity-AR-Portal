@@ -25646,7 +25646,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResourceHandle__cctor_m98CA0F30573F31126
 IL2CPP_EXTERN_C  Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9  DelegatePInvokeWrapper_ScaleFunc_t4F99CE4593CA139621E0607E5305265ED2B52A75 (ScaleFunc_t4F99CE4593CA139621E0607E5305265ED2B52A75 * __this, Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9  ___size0, const RuntimeMethod* method)
 {
 	typedef Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9  (DEFAULT_CALL *PInvokeFunc)(Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9 );
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
 
 	// Native function invocation
 	Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9  returnValue = il2cppPInvokeFunc(___size0);

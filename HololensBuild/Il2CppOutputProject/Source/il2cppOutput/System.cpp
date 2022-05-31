@@ -353,6 +353,8 @@ struct CollectionConverter_t422389A535F7B690A16B943213A57E6464DDA11A;
 struct CompareInfo_t4AB62EC32E8AF1E469E315620C7E3FB8B0CAE0C9;
 // System.ComponentModel.Component
 struct Component_t015539CFEAEEBFD7619041FE006475373E0D71DF;
+// System.ComponentModel.ComponentConverter
+struct ComponentConverter_tCF992F4191A074E0A0BABA13B29B7CA36A446854;
 // System.Configuration.ConfigurationElement
 struct ConfigurationElement_t571C446CFDFF39CF17130653C433786BEFF25DFA;
 // System.Configuration.ConfigurationPropertyCollection
@@ -511,6 +513,8 @@ struct ProxyElement_t8FDBE7BF75B3D7DFB54F903D5A27FC647AC7B5BA;
 struct PublicKey_t40ABE7E0985F3E274C9564670970EC6F3B39A4A2;
 // System.Globalization.Punycode
 struct Punycode_t4BDEEA3305A31302CBC618070AB085F7E3ABB513;
+// System.ComponentModel.ReferenceConverter
+struct ReferenceConverter_t0A15EAEA9B39A729BEB04E0CFE06BC5DF9C1435B;
 // System.Text.RegularExpressions.Regex
 struct Regex_t90F443D398F44965EA241A652ED75DF5BA072A1F;
 // System.Text.RegularExpressions.RegexBoyerMoore
@@ -8530,8 +8534,18 @@ public:
 struct ReferenceConverter_t0A15EAEA9B39A729BEB04E0CFE06BC5DF9C1435B  : public TypeConverter_t004F185B630F00F509F08BD8F8D82471867323B4
 {
 public:
+	// System.Type System.ComponentModel.ReferenceConverter::type
+	Type_t * ___type_3;
 
 public:
+	inline static int32_t get_offset_of_type_3() { return static_cast<int32_t>(offsetof(ReferenceConverter_t0A15EAEA9B39A729BEB04E0CFE06BC5DF9C1435B, ___type_3)); }
+	inline Type_t * get_type_3() const { return ___type_3; }
+	inline Type_t ** get_address_of_type_3() { return &___type_3; }
+	inline void set_type_3(Type_t * value)
+	{
+		___type_3 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___type_3), (void*)value);
+	}
 };
 
 struct ReferenceConverter_t0A15EAEA9B39A729BEB04E0CFE06BC5DF9C1435B_StaticFields
@@ -10203,6 +10217,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t * Object_GetType_m571FE8360C10B98C23AA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m37A5BF26F8F8F1892D60D727303B23FB604FEE78 (String_t* ___str00, String_t* ___str11, String_t* ___str22, String_t* ___str33, const RuntimeMethod* method);
 // System.Void System.MarshalByRefObject::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshalByRefObject__ctor_m308FD08D73062FAC2316A55B752BBB5CF8BF02FE (MarshalByRefObject_tD4DF91B488B284F899417EC468D8E50E933306A8 * __this, const RuntimeMethod* method);
+// System.Void System.ComponentModel.ReferenceConverter::.ctor(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferenceConverter__ctor_m2BF20339AD66B73F51C54F05BCD4C6229CECA08B (ReferenceConverter_t0A15EAEA9B39A729BEB04E0CFE06BC5DF9C1435B * __this, Type_t * ___type0, const RuntimeMethod* method);
 // System.Void System.ComponentModel.BaseNumberConverter::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseNumberConverter__ctor_m18967D5B511402093936893A249438FB94D5BDA3 (BaseNumberConverter_t6CA2001CE79249FCF74FC888710AAD5CA23B748C * __this, const RuntimeMethod* method);
 // System.String System.ComponentModel.DefaultEventAttribute::get_Name()
@@ -15979,6 +15995,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Component__cctor_m360744B949B028CF834E6A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.ComponentModel.ComponentConverter::.ctor(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentConverter__ctor_mDD36736AF6F3957D4E50C9F87959838DEE128D9D (ComponentConverter_tCF992F4191A074E0A0BABA13B29B7CA36A446854 * __this, Type_t * ___type0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReferenceConverter_t0A15EAEA9B39A729BEB04E0CFE06BC5DF9C1435B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t * L_0 = ___type0;
+		IL2CPP_RUNTIME_CLASS_INIT(ReferenceConverter_t0A15EAEA9B39A729BEB04E0CFE06BC5DF9C1435B_il2cpp_TypeInfo_var);
+		ReferenceConverter__ctor_m2BF20339AD66B73F51C54F05BCD4C6229CECA08B(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -28069,6 +28101,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PublicKey__cctor_m36509A197C8D921E8A147E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.ComponentModel.ReferenceConverter::.ctor(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferenceConverter__ctor_m2BF20339AD66B73F51C54F05BCD4C6229CECA08B (ReferenceConverter_t0A15EAEA9B39A729BEB04E0CFE06BC5DF9C1435B * __this, Type_t * ___type0, const RuntimeMethod* method)
+{
+	{
+		TypeConverter__ctor_mCD87E569A2C4CB1331A069396FFA98E65726A16C(__this, /*hidden argument*/NULL);
+		Type_t * L_0 = ___type0;
+		__this->set_type_3(L_0);
+		return;
+	}
+}
 // System.Void System.ComponentModel.ReferenceConverter::.cctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferenceConverter__cctor_m45E0DC0C46388A1333095572684A3A60E9FFB985 (const RuntimeMethod* method)
 {

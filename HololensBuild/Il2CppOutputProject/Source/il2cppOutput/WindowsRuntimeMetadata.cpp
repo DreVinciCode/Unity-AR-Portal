@@ -7881,7 +7881,7 @@ IL2CPP_EXTERN_C  void AsyncActionCompletedHandler_Invoke_m351D4D540D59485AB4607A
 IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_AsyncActionCompletedHandler_t8671E86B99AED1FD2C6DDBF3351570231D8CC9B1 (AsyncActionCompletedHandler_t8671E86B99AED1FD2C6DDBF3351570231D8CC9B1 * __this, RuntimeObject* ___asyncInfo0, int32_t ___asyncStatus1, const RuntimeMethod* method)
 {
 	typedef void (DEFAULT_CALL *PInvokeFunc)(IAsyncAction_tA69CE29E39880E68BF0456395F3B1462DC29BA06*, int32_t);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
 
 	// Marshaling of parameter '___asyncInfo0' to native representation
 	IAsyncAction_tA69CE29E39880E68BF0456395F3B1462DC29BA06* ____asyncInfo0_marshaled = NULL;

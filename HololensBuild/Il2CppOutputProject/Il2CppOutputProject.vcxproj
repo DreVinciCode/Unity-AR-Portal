@@ -243,7 +243,9 @@
     <ClCompile Include="Source\il2cppOutput\Generics46.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Generics47.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Generics48.cpp"></ClCompile>
+    <ClCompile Include="Source\il2cppOutput\Generics49.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Generics5.cpp"></ClCompile>
+    <ClCompile Include="Source\il2cppOutput\Generics50.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Generics6.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Generics7.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Generics8.cpp"></ClCompile>
@@ -433,7 +435,11 @@
     <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions135.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions136.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions137.cpp"></ClCompile>
+    <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions138.cpp"></ClCompile>
+    <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions139.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions14.cpp"></ClCompile>
+    <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions140.cpp"></ClCompile>
+    <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions141.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions15.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions16.cpp"></ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppGenericComDefinitions17.cpp"></ClCompile>
@@ -2505,7 +2511,7 @@
     <Keyword>MakeFileProj</Keyword>
     <ApplicationType>Windows Store</ApplicationType>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

@@ -1010,19 +1010,19 @@ public:
 };
 
 
-// UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__4
-struct U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908  : public RuntimeObject
+// UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__5
+struct U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568  : public RuntimeObject
 {
 public:
-	// System.Int32 UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__4::<>1__state
+	// System.Int32 UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__5::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__4::<>2__current
+	// System.Object UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__5::<>2__current
 	RuntimeObject * ___U3CU3E2__current_1;
-	// UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__4::<>4__this
+	// UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__5::<>4__this
 	WindowsMRRemotingConnector_tD55DC2052F64051DCFA6B587EB64F7EA4706E17E * ___U3CU3E4__this_2;
 
 public:
-	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908, ___U3CU3E1__state_0)); }
+	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568, ___U3CU3E1__state_0)); }
 	inline int32_t get_U3CU3E1__state_0() const { return ___U3CU3E1__state_0; }
 	inline int32_t* get_address_of_U3CU3E1__state_0() { return &___U3CU3E1__state_0; }
 	inline void set_U3CU3E1__state_0(int32_t value)
@@ -1030,7 +1030,7 @@ public:
 		___U3CU3E1__state_0 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3E2__current_1() { return static_cast<int32_t>(offsetof(U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908, ___U3CU3E2__current_1)); }
+	inline static int32_t get_offset_of_U3CU3E2__current_1() { return static_cast<int32_t>(offsetof(U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568, ___U3CU3E2__current_1)); }
 	inline RuntimeObject * get_U3CU3E2__current_1() const { return ___U3CU3E2__current_1; }
 	inline RuntimeObject ** get_address_of_U3CU3E2__current_1() { return &___U3CU3E2__current_1; }
 	inline void set_U3CU3E2__current_1(RuntimeObject * value)
@@ -1039,7 +1039,7 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E2__current_1), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908, ___U3CU3E4__this_2)); }
+	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568, ___U3CU3E4__this_2)); }
 	inline WindowsMRRemotingConnector_tD55DC2052F64051DCFA6B587EB64F7EA4706E17E * get_U3CU3E4__this_2() const { return ___U3CU3E4__this_2; }
 	inline WindowsMRRemotingConnector_tD55DC2052F64051DCFA6B587EB64F7EA4706E17E ** get_address_of_U3CU3E4__this_2() { return &___U3CU3E4__this_2; }
 	inline void set_U3CU3E4__this_2(WindowsMRRemotingConnector_tD55DC2052F64051DCFA6B587EB64F7EA4706E17E * value)
@@ -1050,21 +1050,21 @@ public:
 };
 
 
-// UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__5
-struct U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C  : public RuntimeObject
+// UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__6
+struct U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D  : public RuntimeObject
 {
 public:
-	// System.Int32 UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__5::<>1__state
+	// System.Int32 UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__6::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__5::<>2__current
+	// System.Object UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__6::<>2__current
 	RuntimeObject * ___U3CU3E2__current_1;
-	// UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__5::<>4__this
+	// UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__6::<>4__this
 	WindowsMRRemotingConnector_tD55DC2052F64051DCFA6B587EB64F7EA4706E17E * ___U3CU3E4__this_2;
-	// System.Int32 UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__5::<connectionTryCount>5__2
+	// System.Int32 UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__6::<connectionTryCount>5__2
 	int32_t ___U3CconnectionTryCountU3E5__2_3;
 
 public:
-	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C, ___U3CU3E1__state_0)); }
+	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D, ___U3CU3E1__state_0)); }
 	inline int32_t get_U3CU3E1__state_0() const { return ___U3CU3E1__state_0; }
 	inline int32_t* get_address_of_U3CU3E1__state_0() { return &___U3CU3E1__state_0; }
 	inline void set_U3CU3E1__state_0(int32_t value)
@@ -1072,7 +1072,7 @@ public:
 		___U3CU3E1__state_0 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3E2__current_1() { return static_cast<int32_t>(offsetof(U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C, ___U3CU3E2__current_1)); }
+	inline static int32_t get_offset_of_U3CU3E2__current_1() { return static_cast<int32_t>(offsetof(U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D, ___U3CU3E2__current_1)); }
 	inline RuntimeObject * get_U3CU3E2__current_1() const { return ___U3CU3E2__current_1; }
 	inline RuntimeObject ** get_address_of_U3CU3E2__current_1() { return &___U3CU3E2__current_1; }
 	inline void set_U3CU3E2__current_1(RuntimeObject * value)
@@ -1081,7 +1081,7 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E2__current_1), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C, ___U3CU3E4__this_2)); }
+	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D, ___U3CU3E4__this_2)); }
 	inline WindowsMRRemotingConnector_tD55DC2052F64051DCFA6B587EB64F7EA4706E17E * get_U3CU3E4__this_2() const { return ___U3CU3E4__this_2; }
 	inline WindowsMRRemotingConnector_tD55DC2052F64051DCFA6B587EB64F7EA4706E17E ** get_address_of_U3CU3E4__this_2() { return &___U3CU3E4__this_2; }
 	inline void set_U3CU3E4__this_2(WindowsMRRemotingConnector_tD55DC2052F64051DCFA6B587EB64F7EA4706E17E * value)
@@ -1090,7 +1090,7 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E4__this_2), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CconnectionTryCountU3E5__2_3() { return static_cast<int32_t>(offsetof(U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C, ___U3CconnectionTryCountU3E5__2_3)); }
+	inline static int32_t get_offset_of_U3CconnectionTryCountU3E5__2_3() { return static_cast<int32_t>(offsetof(U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D, ___U3CconnectionTryCountU3E5__2_3)); }
 	inline int32_t get_U3CconnectionTryCountU3E5__2_3() const { return ___U3CconnectionTryCountU3E5__2_3; }
 	inline int32_t* get_address_of_U3CconnectionTryCountU3E5__2_3() { return &___U3CconnectionTryCountU3E5__2_3; }
 	inline void set_U3CconnectionTryCountU3E5__2_3(int32_t value)
@@ -6628,10 +6628,10 @@ IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_U3CInflateCoroutineU
 	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) U3CInflateCoroutineU3Ed__18_t6CF5D693693B53CF22FAF88F74F84DDCE63D52AD_ComCallableWrapper(obj));
 }
 
-// COM Callable Wrapper for UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__4
-struct U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908_ComCallableWrapper>, IClosable_t30CA7D2BE598B3BD6AA57CE9DF977DB51540B953
+// COM Callable Wrapper for UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<StartRemotingSession>d__5
+struct U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568_ComCallableWrapper>, IClosable_t30CA7D2BE598B3BD6AA57CE9DF977DB51540B953
 {
-	inline U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908_ComCallableWrapper>(obj) {}
+	inline U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568_ComCallableWrapper>(obj) {}
 
 	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
 	{
@@ -6712,21 +6712,21 @@ struct U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908_
 	}
 };
 
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908(RuntimeObject* obj)
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568(RuntimeObject* obj)
 {
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908_ComCallableWrapper));
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568_ComCallableWrapper));
 	if (memory == NULL)
 	{
 		il2cpp_codegen_raise_out_of_memory_exception();
 	}
 
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) U3CStartRemotingSessionU3Ed__4_tC7287BE14E1C5CCE886995E1FE308EF43F34D908_ComCallableWrapper(obj));
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) U3CStartRemotingSessionU3Ed__5_t50091BE9F4D912B7FD6A1AB49C884A2428182568_ComCallableWrapper(obj));
 }
 
-// COM Callable Wrapper for UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__5
-struct U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C_ComCallableWrapper>, IClosable_t30CA7D2BE598B3BD6AA57CE9DF977DB51540B953
+// COM Callable Wrapper for UnityEngine.XR.WindowsMR.WindowsMRRemotingConnector/<TryConnect>d__6
+struct U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D_ComCallableWrapper>, IClosable_t30CA7D2BE598B3BD6AA57CE9DF977DB51540B953
 {
-	inline U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C_ComCallableWrapper>(obj) {}
+	inline U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D_ComCallableWrapper>(obj) {}
 
 	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
 	{
@@ -6807,15 +6807,15 @@ struct U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C_ComCallabl
 	}
 };
 
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C(RuntimeObject* obj)
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D(RuntimeObject* obj)
 {
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C_ComCallableWrapper));
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D_ComCallableWrapper));
 	if (memory == NULL)
 	{
 		il2cpp_codegen_raise_out_of_memory_exception();
 	}
 
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) U3CTryConnectU3Ed__5_tC9D5B641DE99F4D0B09B9E5A78D2B8E5125A122C_ComCallableWrapper(obj));
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) U3CTryConnectU3Ed__6_t39160E5D5A226364C05D5D4595F7B981AAE6BA1D_ComCallableWrapper(obj));
 }
 
 // COM Callable Wrapper for UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24
