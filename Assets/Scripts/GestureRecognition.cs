@@ -70,7 +70,7 @@ public class GestureRecognition : MonoBehaviour
         float ringCurl = HandPoseUtils.RingFingerCurl(Handedness.Both);
         float pinkyCurl = HandPoseUtils.PinkyFingerCurl(Handedness.Both);
 
-        if(thumbCurl < 0.4f && indexCurl < 0.05f && middleCurl < 0.05f && ringCurl < 0.05f && pinkyCurl < 0.05f)
+        if(thumbCurl < 0.3f && indexCurl < 0.04f && middleCurl < 0.01f && ringCurl < 0.01f && pinkyCurl < 0.04f)
         {
             CubeSummon();
         }
@@ -187,6 +187,7 @@ public class GestureRecognition : MonoBehaviour
     {
         OnSnapDetected?.Invoke(this, EventArgs.Empty);
     }
+
 
     Gesture RecognizedGesture()
     {

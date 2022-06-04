@@ -3706,9 +3706,9 @@ struct NOVTABLE IBindableIterable_tF6BD0C070562CD9C91E3C1B1A5F4667E9C3C74A8 : Il
 struct NOVTABLE IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB : Il2CppIInspectable
 {
 	static const Il2CppGuid IID;
-	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_Current_m53A4B6F2DECC874908CA9335785007A39D6FC93E(Il2CppIInspectable** comReturnValue) = 0;
-	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_HasCurrent_m4FD33F7F3A504A8F4A4C7DE3965342B19EA3A974(bool* comReturnValue) = 0;
-	virtual il2cpp_hresult_t STDCALL IBindableIterator_MoveNext_mA70DABC057BE3ED9199D4E0E6FEBDF6ED3570A75(bool* comReturnValue) = 0;
+	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_Current_m925423E867873FA1E4ED0804031A06C0852D7A54(Il2CppIInspectable** comReturnValue) = 0;
+	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_HasCurrent_m4DAEC47CD0F9FD8C8102793367E1977C7F759FFA(bool* comReturnValue) = 0;
+	virtual il2cpp_hresult_t STDCALL IBindableIterator_MoveNext_m4FB28C3D3863BB69F92027EE724CA8BE91833706(bool* comReturnValue) = 0;
 };
 // Windows.UI.Xaml.Interop.IBindableVector
 struct NOVTABLE IBindableVector_tC070A96258CD93818901E9B7808E1A8EFB64B7EC : Il2CppIInspectable
@@ -3737,7 +3737,7 @@ struct NOVTABLE IBindableVectorView_tD80A01049DD2609FEA5FACD5E77BF95A875534FA : 
 struct NOVTABLE IClosable_t30CA7D2BE598B3BD6AA57CE9DF977DB51540B953 : Il2CppIInspectable
 {
 	static const Il2CppGuid IID;
-	virtual il2cpp_hresult_t STDCALL IClosable_Close_m7DE2119A960C4E3898E6E5D03245D047BF113999() = 0;
+	virtual il2cpp_hresult_t STDCALL IClosable_Close_m39D5256F4888029EB959CFA74DD76EB47B570871() = 0;
 };
 // Windows.Media.SpeechSynthesis.IVoiceInformation
 struct NOVTABLE IVoiceInformation_t2E27BE76AA5A80F7989CA15FA42C1BFD7A8AE973 : Il2CppIInspectable
@@ -80115,16 +80115,16 @@ struct IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB_Adapter IL2CP
 	{
 		return ComObjectBase::GetTrustLevel(trustLevel);
 	}
-	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_Current_m53A4B6F2DECC874908CA9335785007A39D6FC93E(Il2CppIInspectable** comReturnValue) IL2CPP_OVERRIDE;
-	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_HasCurrent_m4FD33F7F3A504A8F4A4C7DE3965342B19EA3A974(bool* comReturnValue) IL2CPP_OVERRIDE;
-	virtual il2cpp_hresult_t STDCALL IBindableIterator_MoveNext_mA70DABC057BE3ED9199D4E0E6FEBDF6ED3570A75(bool* comReturnValue) IL2CPP_OVERRIDE;
+	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_Current_m925423E867873FA1E4ED0804031A06C0852D7A54(Il2CppIInspectable** comReturnValue) IL2CPP_OVERRIDE;
+	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_HasCurrent_m4DAEC47CD0F9FD8C8102793367E1977C7F759FFA(bool* comReturnValue) IL2CPP_OVERRIDE;
+	virtual il2cpp_hresult_t STDCALL IBindableIterator_MoveNext_m4FB28C3D3863BB69F92027EE724CA8BE91833706(bool* comReturnValue) IL2CPP_OVERRIDE;
 private:
 	bool _initialized;
 	bool _hasCurrent;
 	il2cpp_hresult_t Initialize();
 	il2cpp_hresult_t MoveNext(bool* comReturnValue);
 };
-il2cpp_hresult_t IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB_Adapter::IBindableIterator_get_Current_m53A4B6F2DECC874908CA9335785007A39D6FC93E(Il2CppIInspectable** comReturnValue)
+il2cpp_hresult_t IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB_Adapter::IBindableIterator_get_Current_m925423E867873FA1E4ED0804031A06C0852D7A54(Il2CppIInspectable** comReturnValue)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -80187,7 +80187,7 @@ il2cpp_hresult_t IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB_Ada
 	*comReturnValue = _returnValue_marshaled;
 	return IL2CPP_S_OK;
 }
-il2cpp_hresult_t IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB_Adapter::IBindableIterator_get_HasCurrent_m4FD33F7F3A504A8F4A4C7DE3965342B19EA3A974(bool* comReturnValue)
+il2cpp_hresult_t IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB_Adapter::IBindableIterator_get_HasCurrent_m4DAEC47CD0F9FD8C8102793367E1977C7F759FFA(bool* comReturnValue)
 {
 	il2cpp_hresult_t hr = Initialize();
 	if (IL2CPP_HR_FAILED(hr))
@@ -80198,7 +80198,7 @@ il2cpp_hresult_t IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB_Ada
 	*comReturnValue = _hasCurrent;
 	return IL2CPP_S_OK;
 }
-il2cpp_hresult_t IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB_Adapter::IBindableIterator_MoveNext_mA70DABC057BE3ED9199D4E0E6FEBDF6ED3570A75(bool* comReturnValue)
+il2cpp_hresult_t IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB_Adapter::IBindableIterator_MoveNext_m4FB28C3D3863BB69F92027EE724CA8BE91833706(bool* comReturnValue)
 {
 	il2cpp_hresult_t hr = Initialize();
 	if (IL2CPP_HR_FAILED(hr))
@@ -80862,7 +80862,7 @@ il2cpp_hresult_t IBindableVector_Clear_mEF05B40EFF6D42CBB5A5E336B0946FECE7A4A6EF
 	return IL2CPP_S_OK;
 }
 // Projected COM callable wrapper method for System.Void Windows.Foundation.IClosable::Close()
-il2cpp_hresult_t IClosable_Close_m7DE2119A960C4E3898E6E5D03245D047BF113999_ComCallableWrapperProjectedMethod(RuntimeObject* __this)
+il2cpp_hresult_t IClosable_Close_m39D5256F4888029EB959CFA74DD76EB47B570871_ComCallableWrapperProjectedMethod(RuntimeObject* __this)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)

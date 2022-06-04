@@ -8,12 +8,13 @@ using Microsoft.MixedReality.Toolkit.Input;
 public class CubeBehavior : MonoBehaviour
 {
     public GameObject CompanionCube;
-
+    public Vector3 offset;
     MixedRealityPose pose;
 
-    public Vector3 offset;
+    private bool timecheck = false;
 
-    // Start is called before the first frame update
+    private float deltaTime = 0;
+
     void Start()
     {
         GestureRecognition gestureRecognition = FindObjectOfType<GestureRecognition>();
@@ -22,13 +23,23 @@ public class CubeBehavior : MonoBehaviour
 
     private void GestureRecognition_OnSnapDetected(object sender, System.EventArgs e)
     {
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Both, out pose))
+        deltaTime = deltaTime + Time.deltaTime;
+
+        if(deltaTime > 1)
+        {
+            timecheck = true;
+            deltaTime = 0;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Both, out pose) && timecheck)
         {
             var cube = Instantiate(CompanionCube, pose.Position + offset, pose.Rotation);
+            timecheck = false;
         }
+
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Right, out pose) && Input.GetKeyDown(KeyCode.K))

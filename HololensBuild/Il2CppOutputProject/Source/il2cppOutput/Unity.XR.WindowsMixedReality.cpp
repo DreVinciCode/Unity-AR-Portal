@@ -20654,7 +20654,7 @@ IL2CPP_EXTERN_C void SecureListenData_tF95ECCAD49E4CFD3AC764CA66476F16F89952B8B_
 IL2CPP_EXTERN_C  bool DelegatePInvokeWrapper_ValidateToken_t9B17C133B24668B152C06A7C143F92C9D308BD82 (ValidateToken_t9B17C133B24668B152C06A7C143F92C9D308BD82 * __this, String_t* ___token0, String_t* ___tokenToCheck1, const RuntimeMethod* method)
 {
 	typedef int32_t (DEFAULT_CALL *PInvokeFunc)(Il2CppChar*, Il2CppChar*);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
 
 	// Marshaling of parameter '___token0' to native representation
 	Il2CppChar* ____token0_marshaled = NULL;
@@ -22083,7 +22083,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeApi_UnityWindowsMR_refPoints_t
 IL2CPP_EXTERN_C  void* DelegatePInvokeWrapper_GetGestureEventsPtrFunction_tE0B89B0CE550AE2FAFA32DF86191187734D08A82 (GetGestureEventsPtrFunction_tE0B89B0CE550AE2FAFA32DF86191187734D08A82 * __this, int32_t* ___gesturesLength0, int32_t* ___elementSize1, const RuntimeMethod* method)
 {
 	typedef void* (DEFAULT_CALL *PInvokeFunc)(int32_t*, int32_t*);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
 
 	// Native function invocation
 	void* returnValue = il2cppPInvokeFunc(___gesturesLength0, ___elementSize1);

@@ -10867,8 +10867,6 @@ inline int32_t List_1_get_Count_mC8ED5AD234CC8213B63B7A3D5364F2FB03F225E4_inline
 {
 	return ((  int32_t (*) (List_1_t34AA4AF4E7352129CA58045901530E41445AC16D *, const RuntimeMethod*))List_1_get_Count_m5D847939ABB9A78203B062CAFFE975792174D00F_gshared_inline)(__this, method);
 }
-// System.Void UnityEngine.UI.Selectable::set_hasSelection(System.Boolean)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Selectable_set_hasSelection_mCDC1198B44CED5A1B1A02881BC5E53FF574A19F3_inline (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.UI.Selectable::set_isPointerDown(System.Boolean)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Selectable_set_isPointerDown_m8B64367E49F20925A0D7755CE456CA5E91E84BB5_inline (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD * __this, bool ___value0, const RuntimeMethod* method);
 // UnityEngine.UI.Selectable/SelectionState UnityEngine.UI.Selectable::get_currentSelectionState()
@@ -10883,6 +10881,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Selectable_get_isPointerInsi
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AnimationTriggers_get_normalTrigger_m32A0AABB530B9DB501EEEAD4CD2B464A8D3AD44A_inline (AnimationTriggers_tF38CA7FA631709E096B57D732668D86081F44C11 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.UI.Selectable::set_isPointerInside(System.Boolean)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Selectable_set_isPointerInside_m235566B1D1AC3989033566483BA78B3B6D65A080_inline (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD * __this, bool ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.UI.Selectable::set_hasSelection(System.Boolean)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Selectable_set_hasSelection_mCDC1198B44CED5A1B1A02881BC5E53FF574A19F3_inline (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD * __this, bool ___value0, const RuntimeMethod* method);
 // UnityEngine.Color UnityEngine.Color::get_white()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  Color_get_white_mB21E47D20959C3AEC41AF8BA04F63AC89FAF319E (const RuntimeMethod* method);
 // System.Void UnityEngine.UI.Selectable::StartColorTween(UnityEngine.Color,System.Boolean)
@@ -28777,8 +28777,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Selectable_OnEnable_m16A76B731BE2E80E08B
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventSystem_t5DC458FCD0355A74CDCCE79287B38B9C4278E39C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SelectableU5BU5D_tECF9F5BDBF0652A937D18F10C883EFDAE2E62535_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -28831,61 +28829,25 @@ IL_0009:
 
 IL_0044:
 	{
-		// if (EventSystem.current && EventSystem.current.currentSelectedGameObject == gameObject)
-		IL2CPP_RUNTIME_CLASS_INIT(EventSystem_t5DC458FCD0355A74CDCCE79287B38B9C4278E39C_il2cpp_TypeInfo_var);
-		EventSystem_t5DC458FCD0355A74CDCCE79287B38B9C4278E39C * L_9;
-		L_9 = EventSystem_get_current_m4B9C11F490297AE55428038DACD240596D6CE5F2(/*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		bool L_10;
-		L_10 = Object_op_Implicit_mC8214E4F028CC2F036CC82BDB81D102A02893499(L_9, /*hidden argument*/NULL);
-		if (!L_10)
-		{
-			goto IL_006e;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(EventSystem_t5DC458FCD0355A74CDCCE79287B38B9C4278E39C_il2cpp_TypeInfo_var);
-		EventSystem_t5DC458FCD0355A74CDCCE79287B38B9C4278E39C * L_11;
-		L_11 = EventSystem_get_current_m4B9C11F490297AE55428038DACD240596D6CE5F2(/*hidden argument*/NULL);
-		NullCheck(L_11);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_12;
-		L_12 = EventSystem_get_currentSelectedGameObject_m999F9BFD4C20E2F00C56D4FED89602B6077EF70D_inline(L_11, /*hidden argument*/NULL);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_13;
-		L_13 = Component_get_gameObject_m55DC35B149AFB9157582755383BA954655FE0C5B(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		bool L_14;
-		L_14 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_12, L_13, /*hidden argument*/NULL);
-		if (!L_14)
-		{
-			goto IL_006e;
-		}
-	}
-	{
-		// hasSelection = true;
-		Selectable_set_hasSelection_mCDC1198B44CED5A1B1A02881BC5E53FF574A19F3_inline(__this, (bool)1, /*hidden argument*/NULL);
-	}
-
-IL_006e:
-	{
 		// m_CurrentIndex = s_SelectableCount;
 		IL2CPP_RUNTIME_CLASS_INIT(Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var);
-		int32_t L_15 = ((Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_StaticFields*)il2cpp_codegen_static_fields_for(Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var))->get_s_SelectableCount_5();
-		__this->set_m_CurrentIndex_15(L_15);
+		int32_t L_9 = ((Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_StaticFields*)il2cpp_codegen_static_fields_for(Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var))->get_s_SelectableCount_5();
+		__this->set_m_CurrentIndex_15(L_9);
 		// s_Selectables[m_CurrentIndex] = this;
-		SelectableU5BU5D_tECF9F5BDBF0652A937D18F10C883EFDAE2E62535* L_16 = ((Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_StaticFields*)il2cpp_codegen_static_fields_for(Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var))->get_s_Selectables_4();
-		int32_t L_17 = __this->get_m_CurrentIndex_15();
-		NullCheck(L_16);
-		ArrayElementTypeCheck (L_16, __this);
-		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(L_17), (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD *)__this);
+		SelectableU5BU5D_tECF9F5BDBF0652A937D18F10C883EFDAE2E62535* L_10 = ((Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_StaticFields*)il2cpp_codegen_static_fields_for(Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var))->get_s_Selectables_4();
+		int32_t L_11 = __this->get_m_CurrentIndex_15();
+		NullCheck(L_10);
+		ArrayElementTypeCheck (L_10, __this);
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(L_11), (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD *)__this);
 		// s_SelectableCount++;
-		int32_t L_18 = ((Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_StaticFields*)il2cpp_codegen_static_fields_for(Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var))->get_s_SelectableCount_5();
-		((Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_StaticFields*)il2cpp_codegen_static_fields_for(Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var))->set_s_SelectableCount_5(((int32_t)il2cpp_codegen_add((int32_t)L_18, (int32_t)1)));
+		int32_t L_12 = ((Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_StaticFields*)il2cpp_codegen_static_fields_for(Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var))->get_s_SelectableCount_5();
+		((Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_StaticFields*)il2cpp_codegen_static_fields_for(Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD_il2cpp_TypeInfo_var))->set_s_SelectableCount_5(((int32_t)il2cpp_codegen_add((int32_t)L_12, (int32_t)1)));
 		// isPointerDown = false;
 		Selectable_set_isPointerDown_m8B64367E49F20925A0D7755CE456CA5E91E84BB5_inline(__this, (bool)0, /*hidden argument*/NULL);
 		// DoStateTransition(currentSelectionState, true);
-		int32_t L_19;
-		L_19 = Selectable_get_currentSelectionState_m2F4651DC6AA8CD09F3395F178523D937DFDFCD2E(__this, /*hidden argument*/NULL);
-		VirtActionInvoker2< int32_t, bool >::Invoke(26 /* System.Void UnityEngine.UI.Selectable::DoStateTransition(UnityEngine.UI.Selectable/SelectionState,System.Boolean) */, __this, L_19, (bool)1);
+		int32_t L_13;
+		L_13 = Selectable_get_currentSelectionState_m2F4651DC6AA8CD09F3395F178523D937DFDFCD2E(__this, /*hidden argument*/NULL);
+		VirtActionInvoker2< int32_t, bool >::Invoke(26 /* System.Void UnityEngine.UI.Selectable::DoStateTransition(UnityEngine.UI.Selectable/SelectionState,System.Boolean) */, __this, L_13, (bool)1);
 		// m_EnableCalled = true;
 		__this->set_m_EnableCalled_6((bool)1);
 		// }
@@ -34504,15 +34466,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Navigation_t1CF0FFB22C0357CD64714
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Selectable_set_hasSelection_mCDC1198B44CED5A1B1A02881BC5E53FF574A19F3_inline (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD * __this, bool ___value0, const RuntimeMethod* method)
-{
-	{
-		// private bool             hasSelection      { get; set; }
-		bool L_0 = ___value0;
-		__this->set_U3ChasSelectionU3Ek__BackingField_18(L_0);
-		return;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Selectable_set_isPointerDown_m8B64367E49F20925A0D7755CE456CA5E91E84BB5_inline (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD * __this, bool ___value0, const RuntimeMethod* method)
 {
 	{
@@ -34560,6 +34513,15 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Selectable_set_isPointerInsi
 		// private bool             isPointerInside   { get; set; }
 		bool L_0 = ___value0;
 		__this->set_U3CisPointerInsideU3Ek__BackingField_16(L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Selectable_set_hasSelection_mCDC1198B44CED5A1B1A02881BC5E53FF574A19F3_inline (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		// private bool             hasSelection      { get; set; }
+		bool L_0 = ___value0;
+		__this->set_U3ChasSelectionU3Ek__BackingField_18(L_0);
 		return;
 	}
 }

@@ -73,27 +73,10 @@ static COMPILER_FORCEINLINE void Baselib_atomic_thread_fence_##order()          
 #endif
 
 
-#define detail_LOAD_BITS_8(obj, result) *(__int8*)result = *(const volatile __int8*)obj
-#define detail_LOAD_BITS_16(obj, result) *(__int16*)result = *(const volatile __int16*)obj
-#define detail_LOAD_BITS_32(obj, result) *(__int32*)result = *(const volatile __int32*)obj
-#if PLATFORM_ARCH_64
-    #define detail_LOAD_BITS_64(obj, result) *(__int64*)result = *(const volatile __int64*)obj
-#else
-// x86 32-bit load/store 64-bit integer.
-// - SSE2 enabled yields (identical to __mm_store/load):
-// movsd   xmm0, QWORD PTR unsigned __int64 obj
-// movsd   QWORD PTR unsigned __int64 result, xmm0
-// - No SSE2 enabled yields:
-// fld     QWORD PTR unsigned __int64 obj
-// fstp    QWORD PTR unsigned __int64 result
-// Link comparing various implementations: https://godbolt.org/z/T3zW5M
-    #define detail_LOAD_BITS_64(obj, result) *(double*)result = *(const volatile double*)obj
-#endif
-
 #define detail_LOAD(op, order, id , bits, int_type, ...)                                                                                                \
 static FORCE_INLINE void Baselib_atomic_##op##_##id##_##order##_v(const void* obj, void* result)                                                        \
 {                                                                                                                                                       \
-    detail_LOAD_BITS_##bits(obj, result);                                                                                                               \
+    *(__int##bits*)result = *(const volatile __int##bits*)obj;                                                                                          \
     detail_acquire(order, _ReadWriteBarrier());                                                                                                         \
     detail_seq_cst(order, _ReadWriteBarrier());                                                                                                         \
 }
@@ -101,25 +84,16 @@ static FORCE_INLINE void Baselib_atomic_##op##_##id##_##order##_v(const void* ob
 #define detail_LOAD_NOT_CONST(op, order, id , bits, int_type, ...)                                                                                      \
 static FORCE_INLINE void Baselib_atomic_##op##_##id##_##order##_v(void* obj, void* result)                                                              \
 {                                                                                                                                                       \
-    detail_LOAD_BITS_##bits(obj, result);                                                                                                               \
+    *(__int##bits*)result = *(const volatile __int##bits*)obj;                                                                                          \
     detail_acquire(order, _ReadWriteBarrier());                                                                                                         \
     detail_seq_cst(order, _ReadWriteBarrier());                                                                                                         \
 }
 
-#define detail_STORE_BITS_8(obj, value) *(volatile __int8*)obj = *(const __int8*)value
-#define detail_STORE_BITS_16(obj, value) *(volatile __int16*)obj = *(const __int16*)value
-#define detail_STORE_BITS_32(obj, value) *(volatile __int32*)obj = *(const __int32*)value
-#if PLATFORM_ARCH_64
-    #define detail_STORE_BITS_64(obj, value) *(volatile __int64*)obj = *(const __int64*)value
-#else
-    #define detail_STORE_BITS_64(obj, value) *(volatile double*)obj = *(double*)value
-#endif
-
 #define detail_STORE(op, order, id , bits, int_type, ...)                                                                                               \
 static FORCE_INLINE void Baselib_atomic_##op##_##id##_##order##_v(void* obj, const void* value)                                                         \
 {                                                                                                                                                       \
-    detail_relaxed(order, detail_STORE_BITS_##bits(obj, value));                                                                                        \
-    detail_release(order, detail_STORE_BITS_##bits(obj, value); _ReadWriteBarrier());                                                                   \
+    detail_relaxed(order, *(volatile __int##bits*)obj = *(const __int##bits*)value);                                                                    \
+    detail_release(order, *(volatile __int##bits*)obj = *(const __int##bits*)value; _ReadWriteBarrier());                                               \
     detail_seq_cst(order, _InterlockedExchange##bits((__int##bits*)obj, *(const __int##bits*)value));                                                   \
 }
 
@@ -309,15 +283,6 @@ Baselib_Atomic_FOR_EACH_ATOMIC_OP_AND_MEMORY_ORDER(
 #undef detail_LOAD_STORE
 #undef detail_CMP_XCHG
 #undef detail_NOT_SUPPORTED
-
-#undef detail_LOAD_BITS_8
-#undef detail_LOAD_BITS_16
-#undef detail_LOAD_BITS_32
-#undef detail_LOAD_BITS_64
-#undef detail_STORE_BITS_8
-#undef detail_STORE_BITS_16
-#undef detail_STORE_BITS_32
-#undef detail_STORE_BITS_64
 
 #undef detail_intrinsic_exchange
 #undef detail_intrinsic_fetch_add

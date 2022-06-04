@@ -5105,10 +5105,14 @@ struct CubeBehavior_tC4CD04CDCBB2780EF589952FD8ADED491E8B5ECE  : public MonoBeha
 public:
 	// UnityEngine.GameObject CubeBehavior::CompanionCube
 	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___CompanionCube_4;
-	// Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose CubeBehavior::pose
-	MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8  ___pose_5;
 	// UnityEngine.Vector3 CubeBehavior::offset
-	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___offset_6;
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___offset_5;
+	// Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose CubeBehavior::pose
+	MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8  ___pose_6;
+	// System.Boolean CubeBehavior::timecheck
+	bool ___timecheck_7;
+	// System.Single CubeBehavior::deltaTime
+	float ___deltaTime_8;
 
 public:
 	inline static int32_t get_offset_of_CompanionCube_4() { return static_cast<int32_t>(offsetof(CubeBehavior_tC4CD04CDCBB2780EF589952FD8ADED491E8B5ECE, ___CompanionCube_4)); }
@@ -5120,20 +5124,36 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___CompanionCube_4), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_pose_5() { return static_cast<int32_t>(offsetof(CubeBehavior_tC4CD04CDCBB2780EF589952FD8ADED491E8B5ECE, ___pose_5)); }
-	inline MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8  get_pose_5() const { return ___pose_5; }
-	inline MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * get_address_of_pose_5() { return &___pose_5; }
-	inline void set_pose_5(MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8  value)
+	inline static int32_t get_offset_of_offset_5() { return static_cast<int32_t>(offsetof(CubeBehavior_tC4CD04CDCBB2780EF589952FD8ADED491E8B5ECE, ___offset_5)); }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  get_offset_5() const { return ___offset_5; }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * get_address_of_offset_5() { return &___offset_5; }
+	inline void set_offset_5(Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  value)
 	{
-		___pose_5 = value;
+		___offset_5 = value;
 	}
 
-	inline static int32_t get_offset_of_offset_6() { return static_cast<int32_t>(offsetof(CubeBehavior_tC4CD04CDCBB2780EF589952FD8ADED491E8B5ECE, ___offset_6)); }
-	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  get_offset_6() const { return ___offset_6; }
-	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * get_address_of_offset_6() { return &___offset_6; }
-	inline void set_offset_6(Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  value)
+	inline static int32_t get_offset_of_pose_6() { return static_cast<int32_t>(offsetof(CubeBehavior_tC4CD04CDCBB2780EF589952FD8ADED491E8B5ECE, ___pose_6)); }
+	inline MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8  get_pose_6() const { return ___pose_6; }
+	inline MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * get_address_of_pose_6() { return &___pose_6; }
+	inline void set_pose_6(MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8  value)
 	{
-		___offset_6 = value;
+		___pose_6 = value;
+	}
+
+	inline static int32_t get_offset_of_timecheck_7() { return static_cast<int32_t>(offsetof(CubeBehavior_tC4CD04CDCBB2780EF589952FD8ADED491E8B5ECE, ___timecheck_7)); }
+	inline bool get_timecheck_7() const { return ___timecheck_7; }
+	inline bool* get_address_of_timecheck_7() { return &___timecheck_7; }
+	inline void set_timecheck_7(bool value)
+	{
+		___timecheck_7 = value;
+	}
+
+	inline static int32_t get_offset_of_deltaTime_8() { return static_cast<int32_t>(offsetof(CubeBehavior_tC4CD04CDCBB2780EF589952FD8ADED491E8B5ECE, ___deltaTime_8)); }
+	inline float get_deltaTime_8() const { return ___deltaTime_8; }
+	inline float* get_address_of_deltaTime_8() { return &___deltaTime_8; }
+	inline void set_deltaTime_8(float value)
+	{
+		___deltaTime_8 = value;
 	}
 };
 
@@ -9234,6 +9254,8 @@ inline GestureRecognition_t92B0CDF816A814A919143D6C0C88E035323CC833 * Object_Fin
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventHandler__ctor_m9D4CC7B806AFF3B790E5E1A3B891F6775A146B78 (EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method);
 // System.Void GestureRecognition::add_OnSnapDetected(System.EventHandler)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureRecognition_add_OnSnapDetected_m759DF58ECFD041AE0ECD1974FE26A28F9C5605EF (GestureRecognition_t92B0CDF816A814A919143D6C0C88E035323CC833 * __this, EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B * ___value0, const RuntimeMethod* method);
+// System.Single UnityEngine.Time::get_deltaTime()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_deltaTime_mCC15F147DA67F38C74CE408FB5D7FF4A87DA2290 (const RuntimeMethod* method);
 // System.Boolean Microsoft.MixedReality.Toolkit.Input.HandJointUtils::TryGetJointPose(Microsoft.MixedReality.Toolkit.Utilities.TrackedHandJoint,Microsoft.MixedReality.Toolkit.Utilities.Handedness,Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HandJointUtils_TryGetJointPose_m6674FA55DDCC18B96B472DC5512391D983BD2EEF (int32_t ___joint0, uint8_t ___handedness1, MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * ___pose2, const RuntimeMethod* method);
 // UnityEngine.Vector3 Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose::get_Position()
@@ -9300,8 +9322,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float HandPoseUtils_PinkyFingerCurl_m07A11C77
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureRecognition_CubeSummon_m44A6818A2F35183774F54835B1E7C258D4DFBAE7 (GestureRecognition_t92B0CDF816A814A919143D6C0C88E035323CC833 * __this, const RuntimeMethod* method);
 // System.Single UnityEngine.Vector3::Distance(UnityEngine.Vector3,UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Vector3_Distance_mB648A79E4A1BAAFBF7B029644638C0D715480677 (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___a0, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___b1, const RuntimeMethod* method);
-// System.Single UnityEngine.Time::get_deltaTime()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_deltaTime_mCC15F147DA67F38C74CE408FB5D7FF4A87DA2290 (const RuntimeMethod* method);
 // System.Void System.EventHandler::Invoke(System.Object,System.EventArgs)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventHandler_Invoke_m0F82470611ECCEECEB93CD16EE16C4D14051EB81 (EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B * __this, RuntimeObject * ___sender0, EventArgs_tBCAACA538A5195B6D6C8DFCC3524A2A4A67FD8BA * ___e1, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Input::GetMouseButtonDown(System.Int32)
@@ -9617,33 +9637,63 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CubeBehavior_GestureRecognition_OnSnapDe
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Both, out pose))
-		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_0 = __this->get_address_of_pose_5();
-		bool L_1;
-		L_1 = HandJointUtils_TryGetJointPose_m6674FA55DDCC18B96B472DC5512391D983BD2EEF(2, 3, (MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *)L_0, /*hidden argument*/NULL);
-		if (!L_1)
+		// deltaTime = deltaTime + Time.deltaTime;
+		float L_0 = __this->get_deltaTime_8();
+		float L_1;
+		L_1 = Time_get_deltaTime_mCC15F147DA67F38C74CE408FB5D7FF4A87DA2290(/*hidden argument*/NULL);
+		__this->set_deltaTime_8(((float)il2cpp_codegen_add((float)L_0, (float)L_1)));
+		// if(deltaTime > 1)
+		float L_2 = __this->get_deltaTime_8();
+		if ((!(((float)L_2) > ((float)(1.0f)))))
 		{
-			goto IL_003c;
+			goto IL_0031;
+		}
+	}
+	{
+		// timecheck = true;
+		__this->set_timecheck_7((bool)1);
+		// deltaTime = 0;
+		__this->set_deltaTime_8((0.0f));
+	}
+
+IL_0031:
+	{
+		// if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Both, out pose) && timecheck)
+		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_3 = __this->get_address_of_pose_6();
+		bool L_4;
+		L_4 = HandJointUtils_TryGetJointPose_m6674FA55DDCC18B96B472DC5512391D983BD2EEF(2, 3, (MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *)L_3, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_007c;
+		}
+	}
+	{
+		bool L_5 = __this->get_timecheck_7();
+		if (!L_5)
+		{
+			goto IL_007c;
 		}
 	}
 	{
 		// var cube = Instantiate(CompanionCube, pose.Position + offset, pose.Rotation);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_2 = __this->get_CompanionCube_4();
-		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_3 = __this->get_address_of_pose_5();
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_4;
-		L_4 = MixedRealityPose_get_Position_m3F18DEDD4E5AE5AC464D7716A3AD50DEA7083B08_inline((MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *)L_3, /*hidden argument*/NULL);
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_5 = __this->get_offset_6();
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_6;
-		L_6 = Vector3_op_Addition_mEE4F672B923CCB184C39AABCA33443DB218E50E0_inline(L_4, L_5, /*hidden argument*/NULL);
-		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_7 = __this->get_address_of_pose_5();
-		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_8;
-		L_8 = MixedRealityPose_get_Rotation_mFC5F977A09541D4835F5C985A73CF81BD4C75E9E_inline((MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *)L_7, /*hidden argument*/NULL);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_6 = __this->get_CompanionCube_4();
+		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_7 = __this->get_address_of_pose_6();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_8;
+		L_8 = MixedRealityPose_get_Position_m3F18DEDD4E5AE5AC464D7716A3AD50DEA7083B08_inline((MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *)L_7, /*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_9 = __this->get_offset_5();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_10;
+		L_10 = Vector3_op_Addition_mEE4F672B923CCB184C39AABCA33443DB218E50E0_inline(L_8, L_9, /*hidden argument*/NULL);
+		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_11 = __this->get_address_of_pose_6();
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_12;
+		L_12 = MixedRealityPose_get_Rotation_mFC5F977A09541D4835F5C985A73CF81BD4C75E9E_inline((MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *)L_11, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_9;
-		L_9 = Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B(L_2, L_6, L_8, /*hidden argument*/Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B_RuntimeMethod_var);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_13;
+		L_13 = Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B(L_6, L_10, L_12, /*hidden argument*/Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B_RuntimeMethod_var);
+		// timecheck = false;
+		__this->set_timecheck_7((bool)0);
 	}
 
-IL_003c:
+IL_007c:
 	{
 		// }
 		return;
@@ -9665,7 +9715,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CubeBehavior_Update_m1C63095B96FB51E61B9
 	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * V_2 = NULL;
 	{
 		// if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Right, out pose) && Input.GetKeyDown(KeyCode.K))
-		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_0 = __this->get_address_of_pose_5();
+		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_0 = __this->get_address_of_pose_6();
 		bool L_1;
 		L_1 = HandJointUtils_TryGetJointPose_m6674FA55DDCC18B96B472DC5512391D983BD2EEF(2, 2, (MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *)L_0, /*hidden argument*/NULL);
 		if (!L_1)
@@ -9684,13 +9734,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CubeBehavior_Update_m1C63095B96FB51E61B9
 	{
 		// GameObject cube = Instantiate(CompanionCube, pose.Position + offset, pose.Rotation) as GameObject;
 		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_3 = __this->get_CompanionCube_4();
-		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_4 = __this->get_address_of_pose_5();
+		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_4 = __this->get_address_of_pose_6();
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_5;
 		L_5 = MixedRealityPose_get_Position_m3F18DEDD4E5AE5AC464D7716A3AD50DEA7083B08_inline((MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *)L_4, /*hidden argument*/NULL);
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_6 = __this->get_offset_6();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_6 = __this->get_offset_5();
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_7;
 		L_7 = Vector3_op_Addition_mEE4F672B923CCB184C39AABCA33443DB218E50E0_inline(L_5, L_6, /*hidden argument*/NULL);
-		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_8 = __this->get_address_of_pose_5();
+		MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 * L_8 = __this->get_address_of_pose_6();
 		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_9;
 		L_9 = MixedRealityPose_get_Rotation_mFC5F977A09541D4835F5C985A73CF81BD4C75E9E_inline((MixedRealityPose_t663547B53DB38465090DC092374B56892043B3E8 *)L_8, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
@@ -10262,37 +10312,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureRecognition_Update_m76BE1D9045049
 		float L_4;
 		L_4 = HandPoseUtils_PinkyFingerCurl_m07A11C770CF37B11B65B79C2EEE6C2CBC6FC01E2(3, /*hidden argument*/NULL);
 		V_4 = L_4;
-		// if(thumbCurl < 0.4f && indexCurl < 0.05f && middleCurl < 0.05f && ringCurl < 0.05f && pinkyCurl < 0.05f)
+		// if(thumbCurl < 0.3f && indexCurl < 0.04f && middleCurl < 0.01f && ringCurl < 0.01f && pinkyCurl < 0.04f)
 		float L_5 = V_0;
-		if ((!(((float)L_5) < ((float)(0.400000006f)))))
+		if ((!(((float)L_5) < ((float)(0.300000012f)))))
 		{
 			goto IL_0053;
 		}
 	}
 	{
 		float L_6 = V_1;
-		if ((!(((float)L_6) < ((float)(0.0500000007f)))))
+		if ((!(((float)L_6) < ((float)(0.0399999991f)))))
 		{
 			goto IL_0053;
 		}
 	}
 	{
 		float L_7 = V_2;
-		if ((!(((float)L_7) < ((float)(0.0500000007f)))))
+		if ((!(((float)L_7) < ((float)(0.00999999978f)))))
 		{
 			goto IL_0053;
 		}
 	}
 	{
 		float L_8 = V_3;
-		if ((!(((float)L_8) < ((float)(0.0500000007f)))))
+		if ((!(((float)L_8) < ((float)(0.00999999978f)))))
 		{
 			goto IL_0053;
 		}
 	}
 	{
 		float L_9 = V_4;
-		if ((!(((float)L_9) < ((float)(0.0500000007f)))))
+		if ((!(((float)L_9) < ((float)(0.0399999991f)))))
 		{
 			goto IL_0053;
 		}

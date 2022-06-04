@@ -1950,7 +1950,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockDriver__ctor_m40E6EFD71A973E8CDAFE73
 IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_ScriptEventDelegate_tD479F8F0EA414C9AE94C5EBAE00960A1134667EF (ScriptEventDelegate_tD479F8F0EA414C9AE94C5EBAE00960A1134667EF * __this, int32_t ___evt0, uint64_t ___param1, const RuntimeMethod* method)
 {
 	typedef void (DEFAULT_CALL *PInvokeFunc)(int32_t, uint64_t);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
 
 	// Native function invocation
 	il2cppPInvokeFunc(___evt0, ___param1);

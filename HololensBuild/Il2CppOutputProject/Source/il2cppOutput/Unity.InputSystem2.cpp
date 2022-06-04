@@ -28031,7 +28031,7 @@ IL_001e:
 IL2CPP_EXTERN_C  int64_t DelegatePInvokeWrapper_InputDeviceExecuteCommandDelegate_tE078CE06750FB97E01556666B898F0E93D19D6DB (InputDeviceExecuteCommandDelegate_tE078CE06750FB97E01556666B898F0E93D19D6DB * __this, InputDeviceCommand_t2366E3DB9E5FB8ABDD77707A3B58C68CEC23B3A6 * ___command0, const RuntimeMethod* method)
 {
 	typedef int64_t (DEFAULT_CALL *PInvokeFunc)(InputDeviceCommand_t2366E3DB9E5FB8ABDD77707A3B58C68CEC23B3A6 *);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
 
 	// Native function invocation
 	int64_t returnValue = il2cppPInvokeFunc(___command0);
@@ -28162,7 +28162,7 @@ IL2CPP_EXTERN_C  String_t* DelegatePInvokeWrapper_InputDeviceFindControlLayoutDe
 
 
 	typedef char* (DEFAULT_CALL *PInvokeFunc)(InputDeviceDescription_tDCF3D4C660B97F28D8AB46D82C0BA8EA727E48C3_marshaled_pinvoke*, char*, Il2CppMethodPointer);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
 
 	// Marshaling of parameter '___description0' to native representation
 	InputDeviceDescription_tDCF3D4C660B97F28D8AB46D82C0BA8EA727E48C3_marshaled_pinvoke* ____description0_marshaled = NULL;
